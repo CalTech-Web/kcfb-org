@@ -137,7 +137,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/membership/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 hover:scale-105 bg-[#A0422A] text-white"
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 hover:scale-105 bg-[#1a1a1a] text-white"
             >
               Become a Member
             </Link>
@@ -276,7 +276,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/sgma/"
-                className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
+                className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#1a1a1a] text-white"
               >
                 Donate to the Defense Fund
               </Link>

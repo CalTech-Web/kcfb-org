@@ -132,7 +132,7 @@ export default function GSAPage() {
           </p>
           <Link
             href="/contact/"
-            className="inline-block px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
+            className="inline-block px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
           >
             Contact Us
           </Link>

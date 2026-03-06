@@ -107,7 +107,7 @@ export default function NewsletterPage() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#A0422A]"
+                  className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#1a1a1a]"
                 >
                   {status === "loading" ? "Subscribing..." : "Subscribe to eNewsletter"}
                 </button>

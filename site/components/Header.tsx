@@ -115,7 +115,7 @@ export default function Header() {
           )}
           <Link
             href="/membership/"
-            className="ml-3 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90 bg-[#A0422A]"
+            className="ml-3 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90 bg-[#1a1a1a]"
           >
             Become a Member
           </Link>
@@ -183,7 +183,7 @@ export default function Header() {
           <div className="mt-4 pt-4 border-t border-gray-200">
             <Link
               href="/membership/"
-              className="block text-center py-3 rounded-lg font-semibold bg-[#A0422A] text-white"
+              className="block text-center py-3 rounded-lg font-semibold bg-[#1a1a1a] text-white"
               onClick={() => setMobileOpen(false)}
             >
               Become a Member

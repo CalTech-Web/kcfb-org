@@ -80,7 +80,7 @@ export default function ChecklistPage() {
                 </p>
                 <Link
                   href="/contact/"
-                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#1a1a1a] text-white"
                 >
                   <Download size={16} />
                   Request Full Checklist

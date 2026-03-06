@@ -102,7 +102,7 @@ export default function MembershipPage() {
 
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
               >
                 Apply for Membership <ArrowRight size={16} />
               </Link>

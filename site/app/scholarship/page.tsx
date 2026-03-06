@@ -56,7 +56,7 @@ export default function ScholarshipPage() {
               </p>
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
               >
                 <GraduationCap size={18} />
                 Request Application Information
