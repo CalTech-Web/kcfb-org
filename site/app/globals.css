@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --forest-green: #1E5C2B;
+  --dark-green: #2D6A2F;
+  --accent-gold: #D4A843;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-forest-green: var(--forest-green);
+  --color-dark-green: var(--dark-green);
+  --color-accent-gold: var(--accent-gold);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+  display: block;
+}
