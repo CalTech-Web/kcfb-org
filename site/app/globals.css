@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #1a1a1a;
-  --primary-dark: #111111;
-  --accent-gold: #F6B330;
+  --primary: #5C6A22;
+  --primary-dark: #4A5A1B;
   --accent-rust: #A0422A;
+  --accent-gold: #F6B330;
   --background: #ffffff;
   --foreground: #1a1a1a;
 }
@@ -14,8 +14,8 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
-  --color-accent-gold: var(--accent-gold);
   --color-accent-rust: var(--accent-rust);
+  --color-accent-gold: var(--accent-gold);
 }
 
 body {

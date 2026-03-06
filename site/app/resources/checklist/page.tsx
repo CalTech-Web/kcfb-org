@@ -63,8 +63,8 @@ export default function ChecklistPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-1">
               <div className="rounded-2xl p-8 bg-white border border-gray-200 sticky top-24">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gray-100">
-                  <FileCheck size={24} className="text-gray-700" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-[#5C6A22]/10">
+                  <FileCheck size={24} className="text-[#5C6A22]" />
                 </div>
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">
                   Grower/Processor Checklist
@@ -80,7 +80,7 @@ export default function ChecklistPage() {
                 </p>
                 <Link
                   href="/contact/"
-                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#1a1a1a] text-white"
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
                 >
                   <Download size={16} />
                   Request Full Checklist
@@ -106,7 +106,7 @@ export default function ChecklistPage() {
                         <li key={item} className="flex items-start gap-3">
                           <CheckCircle
                             size={16}
-                            className="mt-0.5 flex-shrink-0 text-gray-400"
+                            className="mt-0.5 flex-shrink-0 text-[#5C6A22]"
                           />
                           <span className="text-gray-700 text-sm">{item}</span>
                         </li>
@@ -120,19 +120,19 @@ export default function ChecklistPage() {
         </div>
       </section>
 
-      <section className="py-14 px-4 bg-[#1a1a1a]">
+      <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-white">
             Access the Full Checklist
           </h2>
-          <p className="text-gray-400 mb-6 leading-relaxed">
+          <p className="text-green-200 mb-6 leading-relaxed">
             The complete Grower/Processor Checklist is available to KCFB members.
             Join today for $500/year to access this and all other member resources.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/membership/"
-              className="px-6 py-3 rounded-lg font-bold text-black transition-all hover:opacity-90 bg-[#F6B330]"
+              className="px-6 py-3 rounded-lg font-bold text-[#1a1a1a] transition-all hover:opacity-90 bg-[#F6B330]"
             >
               Join KCFB
             </Link>

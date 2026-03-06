@@ -111,7 +111,7 @@ export default function GSAPage() {
                 </p>
                 <Link
                   href="/sgma/"
-                  className="inline-block mt-4 px-4 py-2 rounded-lg text-sm font-bold transition-all hover:opacity-90 bg-[#1a1a1a] text-white"
+                  className="inline-block mt-4 px-4 py-2 rounded-lg text-sm font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
                 >
                   Learn About SGMA Defense
                 </Link>
@@ -132,7 +132,7 @@ export default function GSAPage() {
           </p>
           <Link
             href="/contact/"
-            className="inline-block px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
+            className="inline-block px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#5C6A22]"
           >
             Contact Us
           </Link>

@@ -47,7 +47,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top bar */}
-      <div className="bg-[#1a1a1a] py-2 px-4">
+      <div className="bg-[#5C6A22] py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm text-white">
           <span>Protecting Kings County Agriculture Since 1918</span>
           <a
@@ -115,7 +115,7 @@ export default function Header() {
           )}
           <Link
             href="/membership/"
-            className="ml-3 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90 bg-[#1a1a1a]"
+            className="ml-3 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90 bg-[#A0422A]"
           >
             Become a Member
           </Link>
@@ -183,7 +183,7 @@ export default function Header() {
           <div className="mt-4 pt-4 border-t border-gray-200">
             <Link
               href="/membership/"
-              className="block text-center py-3 rounded-lg font-semibold bg-[#1a1a1a] text-white"
+              className="block text-center py-3 rounded-lg font-semibold bg-[#A0422A] text-white"
               onClick={() => setMobileOpen(false)}
             >
               Become a Member

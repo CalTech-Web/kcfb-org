@@ -26,7 +26,7 @@ export default function PageHero({
       />
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         {badge && (
-          <div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 bg-white/20 backdrop-blur-sm text-white">
+          <div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 bg-[#F6B330] text-[#1a1a1a]">
             {badge}
           </div>
         )}

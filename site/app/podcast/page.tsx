@@ -45,7 +45,7 @@ export default function PodcastPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
                 HOSTED BY DUSTY FERENCE
               </div>
               <h2 className="text-3xl font-bold mb-4 text-gray-900">
@@ -72,7 +72,7 @@ export default function PodcastPage() {
                   href="https://www.youtube.com/@KingsCountyFarmBureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90 bg-[#1a1a1a]"
+                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90 bg-[#A0422A]"
                 >
                   Watch on YouTube
                 </a>
@@ -150,10 +150,10 @@ export default function PodcastPage() {
       </section>
 
       {/* Host Info */}
-      <section className="py-14 px-4 bg-[#1a1a1a]">
+      <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-white">About Your Host</h2>
-          <p className="text-gray-400 leading-relaxed mb-6">
+          <p className="text-green-200 leading-relaxed mb-6">
             Dusty Ference is the Executive Director of Kings County Farm Bureau and
             General Manager of the Excelsior/Kings River Resource Conservation District.
             With a citrus farming background and years of experience as a farm manager,
@@ -161,7 +161,7 @@ export default function PodcastPage() {
           </p>
           <Link
             href="/about/"
-            className="inline-block px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-black"
+            className="inline-block px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
           >
             Learn About KCFB Leadership
           </Link>

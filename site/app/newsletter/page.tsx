@@ -47,8 +47,8 @@ export default function NewsletterPage() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-gray-100">
-                <Mail size={24} className="text-gray-700" />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#5C6A22]/10">
+                <Mail size={24} className="text-[#5C6A22]" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">
@@ -107,7 +107,7 @@ export default function NewsletterPage() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#1a1a1a]"
+                  className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#5C6A22]"
                 >
                   {status === "loading" ? "Subscribing..." : "Subscribe to eNewsletter"}
                 </button>

@@ -33,7 +33,7 @@ export default function ScholarshipPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
                 ANNUAL SCHOLARSHIP
               </div>
               <h2 className="text-3xl font-bold mb-4 text-gray-900">
@@ -56,7 +56,7 @@ export default function ScholarshipPage() {
               </p>
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
               >
                 <GraduationCap size={18} />
                 Request Application Information
@@ -72,7 +72,7 @@ export default function ScholarshipPage() {
                     <li key={req} className="flex items-start gap-3">
                       <CheckCircle
                         size={18}
-                        className="mt-0.5 flex-shrink-0 text-gray-400"
+                        className="mt-0.5 flex-shrink-0 text-[#5C6A22]"
                       />
                       <span className="text-gray-700 text-sm">{req}</span>
                     </li>
@@ -121,8 +121,8 @@ export default function ScholarshipPage() {
                 key={item.title}
                 className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
               >
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-gray-100">
-                  <item.icon size={24} className="text-gray-700" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-[#5C6A22]/10">
+                  <item.icon size={24} className="text-[#5C6A22]" />
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-gray-900">
                   {item.title}
@@ -137,17 +137,17 @@ export default function ScholarshipPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-14 px-4 bg-[#1a1a1a]">
+      <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-white">Apply for the KCFB Scholarship</h2>
-          <p className="text-gray-400 leading-relaxed mb-6">
+          <p className="text-green-200 leading-relaxed mb-6">
             Contact Kings County Farm Bureau to learn about the current scholarship cycle,
             application requirements and deadlines. Our office is here to help you apply.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
-              className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-black"
+              className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
             >
               Contact Us
             </Link>

@@ -93,7 +93,7 @@ export default function MembershipPage() {
                   <li key={benefit} className="flex items-start gap-3">
                     <CheckCircle
                       size={18}
-                      className="mt-0.5 flex-shrink-0 text-gray-400"
+                      className="mt-0.5 flex-shrink-0 text-[#5C6A22]"
                     />
                     <span className="text-gray-700 text-sm">{benefit}</span>
                   </li>
@@ -102,7 +102,7 @@ export default function MembershipPage() {
 
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
               >
                 Apply for Membership <ArrowRight size={16} />
               </Link>
@@ -132,7 +132,7 @@ export default function MembershipPage() {
                       key={dir}
                       className="flex items-center gap-2 text-sm text-gray-700"
                     >
-                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-gray-400" />
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-[#F6B330]" />
                       {dir}
                     </div>
                   ))}
@@ -140,11 +140,11 @@ export default function MembershipPage() {
               </div>
 
               {/* California Farm Bureau */}
-              <div className="rounded-xl p-6 bg-[#1a1a1a]">
+              <div className="rounded-xl p-6 bg-[#5C6A22]">
                 <h3 className="font-bold text-lg mb-3 text-white">
                   Includes California Farm Bureau Membership
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-green-200 text-sm leading-relaxed">
                   Your KCFB membership includes a complimentary California Farm Bureau
                   Federation membership, connecting you to the statewide network of
                   agricultural advocates and extending your member discounts.
@@ -166,7 +166,7 @@ export default function MembershipPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
               <div key={step.step} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="text-4xl font-bold mb-3 text-gray-100">
+                <div className="text-4xl font-bold mb-3 text-amber-100">
                   {step.step}
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-gray-900">
@@ -218,19 +218,19 @@ export default function MembershipPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-14 px-4 bg-[#1a1a1a]">
+      <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4 text-white">
             Ready to Join Kings County Farm Bureau?
           </h2>
-          <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+          <p className="text-green-200 text-lg mb-8 leading-relaxed">
             Contact our office to start your membership application. Our team will
             walk you through the process and answer any questions you have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-black"
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
             >
               Apply for Membership
             </Link>

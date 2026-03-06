@@ -93,17 +93,17 @@ export default function FriendsPage() {
       </section>
 
       {/* Become a Friend */}
-      <section className="py-16 px-4 bg-[#1a1a1a]">
+      <section className="py-16 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Become a Friend of Farm Bureau</h2>
-          <p className="text-gray-400 text-lg leading-relaxed mb-8">
+          <p className="text-green-200 text-lg leading-relaxed mb-8">
             Show your support for Kings County agriculture by becoming a Friend of Farm
             Bureau. Your partnership helps fund advocacy, education and community programs
             that benefit all of Kings County.
           </p>
           <Link
             href="/contact/"
-            className="inline-block px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-black"
+            className="inline-block px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
           >
             Contact Us to Learn More
           </Link>

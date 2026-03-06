@@ -66,11 +66,11 @@ export default function ContactPage() {
 
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
-                    <MapPin size={18} className="text-gray-700" />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#5C6A22]/10">
+                    <MapPin size={18} className="text-[#5C6A22]" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1 text-gray-900">
+                    <div className="font-semibold text-sm mb-1 text-[#5C6A22]">
                       Address
                     </div>
                     <div className="text-gray-600 text-sm">
@@ -81,11 +81,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
-                    <Phone size={18} className="text-gray-700" />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#5C6A22]/10">
+                    <Phone size={18} className="text-[#5C6A22]" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1 text-gray-900">
+                    <div className="font-semibold text-sm mb-1 text-[#5C6A22]">
                       Phone
                     </div>
                     <a
@@ -98,11 +98,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
-                    <Mail size={18} className="text-gray-700" />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#5C6A22]/10">
+                    <Mail size={18} className="text-[#5C6A22]" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1 text-gray-900">
+                    <div className="font-semibold text-sm mb-1 text-[#5C6A22]">
                       Email
                     </div>
                     <a
@@ -115,11 +115,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
-                    <Clock size={18} className="text-gray-700" />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#5C6A22]/10">
+                    <Clock size={18} className="text-[#5C6A22]" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1 text-gray-900">
+                    <div className="font-semibold text-sm mb-1 text-[#5C6A22]">
                       Office Hours
                     </div>
                     <div className="text-gray-600 text-sm">
@@ -131,9 +131,9 @@ export default function ContactPage() {
               </div>
 
               {/* Map placeholder */}
-              <div className="mt-8 rounded-xl overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+              <div className="mt-8 rounded-xl overflow-hidden h-48 flex items-center justify-center bg-[#5C6A22]/10">
                 <div className="text-center">
-                  <MapPin size={32} className="text-gray-400 mx-auto mb-2" />
+                  <MapPin size={32} className="text-[#5C6A22] mx-auto mb-2" />
                   <div className="text-sm font-medium text-gray-500">
                     870 Greenfield Avenue, Hanford, CA
                   </div>
@@ -159,7 +159,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                  <h3 className="text-xl font-bold mb-6 text-gray-900">
+                  <h3 className="text-xl font-bold mb-6 text-[#5C6A22]">
                     Send Us a Message
                   </h3>
                   <form onSubmit={handleSubmit} className="space-y-4">
@@ -244,7 +244,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={status === "loading"}
-                      className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#1a1a1a]"
+                      className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#A0422A]"
                     >
                       {status === "loading" ? "Sending..." : "Send Message"}
                     </button>

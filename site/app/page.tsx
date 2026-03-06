@@ -118,7 +118,7 @@ export default function HomePage() {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center py-24">
-          <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 bg-white/20 backdrop-blur-sm text-white">
+          <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 bg-[#F6B330] text-[#1a1a1a]">
             Agricultural Advocates Since 1918
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -137,7 +137,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/membership/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 hover:scale-105 bg-[#1a1a1a] text-white"
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 hover:scale-105 bg-[#A0422A] text-white"
             >
               Become a Member
             </Link>
@@ -152,15 +152,15 @@ export default function HomePage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="py-10 bg-[#1a1a1a]">
+      <section className="py-10 bg-[#5C6A22]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-3xl md:text-4xl font-bold mb-1 text-white">
+                <div className="text-3xl md:text-4xl font-bold mb-1 text-[#F6B330]">
                   {stat.value}
                 </div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
+                <div className="text-green-200 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -187,7 +187,7 @@ export default function HomePage() {
                 className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all"
               >
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-gray-100">
-                  <service.icon size={24} className="text-gray-800" />
+                  <service.icon size={24} className="text-[#5C6A22]" />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {service.title}
@@ -195,7 +195,7 @@ export default function HomePage() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <div className="flex items-center text-sm font-semibold text-gray-400 group-hover:text-[#A0422A] transition-colors">
+                <div className="flex items-center text-sm font-semibold text-[#A0422A]">
                   Learn More <ArrowRight size={14} className="ml-1" />
                 </div>
               </Link>
@@ -208,14 +208,14 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="rounded-2xl p-10 border border-gray-100">
-            <div className="text-5xl font-serif mb-4 text-gray-200">&ldquo;</div>
+            <div className="text-5xl font-serif mb-4 text-[#F6B330]">&ldquo;</div>
             <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6 text-gray-700 italic">
               We fight for policies and legislation at the local, state and federal levels
               that support our county&apos;s number one industry - agriculture - for future
               generations.
             </blockquote>
             <div>
-              <div className="font-bold text-lg text-gray-900">Dusty Ference</div>
+              <div className="font-bold text-lg text-[#A0422A]">Dusty Ference</div>
               <div className="text-gray-400 text-sm">Executive Director, Kings County Farm Bureau</div>
             </div>
           </div>
@@ -236,7 +236,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
               <div key={step.step} className="relative">
-                <div className="text-5xl font-bold mb-3 leading-none text-gray-100">
+                <div className="text-5xl font-bold mb-3 leading-none text-amber-100">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
@@ -255,7 +255,7 @@ export default function HomePage() {
       <section className="py-14 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="border-l-4 border-gray-200 pl-8">
-            <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
+            <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#A0422A]/10 text-[#A0422A]">
               ACTIVE LITIGATION
             </div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
@@ -276,7 +276,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/sgma/"
-                className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#1a1a1a] text-white"
+                className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
               >
                 Donate to the Defense Fund
               </Link>
@@ -303,7 +303,7 @@ export default function HomePage() {
                   <li key={item} className="flex items-start gap-3">
                     <ChevronRight
                       size={18}
-                      className="mt-0.5 flex-shrink-0 text-gray-300"
+                      className="mt-0.5 flex-shrink-0 text-[#F6B330]"
                     />
                     <span className="text-gray-700 text-sm">{item}</span>
                   </li>
@@ -319,11 +319,11 @@ export default function HomePage() {
                 className="rounded-2xl shadow-xl w-full object-cover"
                 style={{ maxHeight: "500px" }}
               />
-              <div className="absolute -bottom-4 -left-4 rounded-xl p-5 bg-[#1a1a1a] shadow-md">
+              <div className="absolute -bottom-4 -left-4 rounded-xl p-5 bg-[#5C6A22] shadow-md">
                 <div className="text-3xl font-bold text-[#F6B330]">
                   1918
                 </div>
-                <div className="text-sm text-gray-400">Founded in Kings County</div>
+                <div className="text-sm text-green-200">Founded in Kings County</div>
               </div>
             </div>
           </div>
@@ -386,7 +386,7 @@ export default function HomePage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 rounded text-xs font-bold text-white bg-[#1a1a1a]">
+                    <span className="px-2 py-1 rounded text-xs font-bold text-white bg-[#5C6A22]">
                       {event.tag}
                     </span>
                   </div>
@@ -420,7 +420,7 @@ export default function HomePage() {
               />
             </div>
             <div className="order-1 lg:order-2">
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
                 ANNUAL EVENT
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -438,7 +438,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/events/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#5C6A22]"
               >
                 Learn About Our Events <ArrowRight size={16} />
               </Link>
@@ -448,12 +448,12 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 px-4 text-center bg-[#1a1a1a]">
+      <section className="py-16 px-4 text-center bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Ready to Join Kings County Farm Bureau?
           </h2>
-          <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+          <p className="text-green-200 text-lg mb-8 leading-relaxed">
             For $500/year, become part of the only organization exclusively dedicated
             to protecting Kings County agriculture. Your membership funds advocacy,
             education and the future of farming in our community.
@@ -461,7 +461,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/membership/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-black"
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
             >
               Become a Member - $500/Year
             </Link>

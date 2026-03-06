@@ -74,14 +74,14 @@ export default function EventsPage() {
                 }`}
               >
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-700">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
                     {event.tag}
                   </span>
                   <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                     {event.title}
                   </h2>
                   <p className="text-gray-600 leading-relaxed mb-4">{event.description}</p>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold bg-gray-100 text-gray-800">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold bg-[#F6B330]/10 text-[#A0422A]">
                     {event.highlight}
                   </div>
                 </div>
@@ -102,19 +102,19 @@ export default function EventsPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-14 px-4 bg-[#1a1a1a]">
+      <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-white">
             Stay Up to Date on KCFB Events
           </h2>
-          <p className="text-gray-400 mb-6 leading-relaxed">
+          <p className="text-green-200 mb-6 leading-relaxed">
             Sign up for the bi-weekly eNewsletter to receive event announcements,
             agricultural news and KCFB updates directly in your inbox.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/newsletter/"
-              className="px-6 py-3 rounded-lg font-bold text-black transition-all hover:opacity-90 bg-[#F6B330]"
+              className="px-6 py-3 rounded-lg font-bold text-[#1a1a1a] transition-all hover:opacity-90 bg-[#F6B330]"
             >
               Subscribe to eNewsletter
             </Link>

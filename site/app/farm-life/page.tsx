@@ -42,7 +42,7 @@ export default function FarmLifePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
                 MONTHLY PUBLICATION
               </div>
               <h2 className="text-3xl font-bold mb-4 text-gray-900">
@@ -79,13 +79,13 @@ export default function FarmLifePage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/membership/"
-                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90 bg-[#1a1a1a]"
+                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90 bg-[#5C6A22]"
                 >
                   Become a Member
                 </Link>
                 <Link
                   href="/newsletter/"
-                  className="px-6 py-3 rounded-lg font-bold text-center border border-gray-300 text-gray-700 transition-all hover:bg-gray-50"
+                  className="px-6 py-3 rounded-lg font-bold text-center border border-[#5C6A22] text-[#5C6A22] transition-all hover:bg-[#5C6A22]/10"
                 >
                   Subscribe to eNewsletter
                 </Link>
@@ -131,7 +131,7 @@ export default function FarmLifePage() {
                   />
                 </div>
                 <div className="p-5">
-                  <div className="text-xs font-semibold mb-1 text-gray-400">
+                  <div className="text-xs font-semibold mb-1 text-[#A0422A]">
                     {issue.date}
                   </div>
                   <h3 className="font-bold text-gray-900">
@@ -145,10 +145,10 @@ export default function FarmLifePage() {
       </section>
 
       {/* Advertising CTA */}
-      <section className="py-14 px-4 bg-[#1a1a1a]">
+      <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-white">Advertise in Farm Life</h2>
-          <p className="text-gray-400 mb-6 leading-relaxed">
+          <p className="text-green-200 mb-6 leading-relaxed">
             Reach Kings County agricultural professionals, farmers, ranchers and
             agribusiness leaders through Farm Life. Contact us to learn about
             advertising rates and opportunities.
@@ -156,7 +156,7 @@ export default function FarmLifePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kcfb@kcfb.org"
-              className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-black"
+              className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
             >
               Email kcfb@kcfb.org
             </a>
