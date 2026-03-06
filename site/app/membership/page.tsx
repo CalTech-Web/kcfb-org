@@ -70,13 +70,11 @@ export default function MembershipPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl font-bold mb-6" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">
                 Agricultural Membership
               </h2>
-              <div
-                className="inline-flex items-baseline gap-2 mb-6"
-              >
-                <span className="text-5xl font-bold" style={{ color: "#1E5C2B" }}>
+              <div className="inline-flex items-baseline gap-2 mb-6">
+                <span className="text-5xl font-bold text-gray-900">
                   $500
                 </span>
                 <span className="text-gray-500 text-lg">/year</span>
@@ -87,7 +85,7 @@ export default function MembershipPage() {
                 of Kings County agriculture.
               </p>
 
-              <h3 className="font-bold text-lg mb-4" style={{ color: "#1E5C2B" }}>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">
                 Member Benefits Include:
               </h3>
               <ul className="space-y-3 mb-8">
@@ -95,8 +93,7 @@ export default function MembershipPage() {
                   <li key={benefit} className="flex items-start gap-3">
                     <CheckCircle
                       size={18}
-                      className="mt-0.5 flex-shrink-0"
-                      style={{ color: "#1E5C2B" }}
+                      className="mt-0.5 flex-shrink-0 text-gray-400"
                     />
                     <span className="text-gray-700 text-sm">{benefit}</span>
                   </li>
@@ -105,8 +102,7 @@ export default function MembershipPage() {
 
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90"
-                style={{ backgroundColor: "#1E5C2B" }}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
               >
                 Apply for Membership <ArrowRight size={16} />
               </Link>
@@ -124,7 +120,7 @@ export default function MembershipPage() {
 
               {/* Business Directories */}
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <h3 className="font-bold text-lg mb-4" style={{ color: "#1E5C2B" }}>
+                <h3 className="font-bold text-lg mb-4 text-gray-900">
                   Business Directories
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
@@ -136,10 +132,7 @@ export default function MembershipPage() {
                       key={dir}
                       className="flex items-center gap-2 text-sm text-gray-700"
                     >
-                      <div
-                        className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                        style={{ backgroundColor: "#D4A843" }}
-                      />
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-gray-400" />
                       {dir}
                     </div>
                   ))}
@@ -147,14 +140,11 @@ export default function MembershipPage() {
               </div>
 
               {/* California Farm Bureau */}
-              <div
-                className="rounded-xl p-6 text-white"
-                style={{ backgroundColor: "#2D6A2F" }}
-              >
-                <h3 className="font-bold text-lg mb-3">
+              <div className="rounded-xl p-6 bg-[#1a1a1a]">
+                <h3 className="font-bold text-lg mb-3 text-white">
                   Includes California Farm Bureau Membership
                 </h3>
-                <p className="text-green-200 text-sm leading-relaxed">
+                <p className="text-gray-400 text-sm leading-relaxed">
                   Your KCFB membership includes a complimentary California Farm Bureau
                   Federation membership, connecting you to the statewide network of
                   agricultural advocates and extending your member discounts.
@@ -169,20 +159,17 @@ export default function MembershipPage() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">
               How Membership Works
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
               <div key={step.step} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div
-                  className="text-4xl font-bold mb-3"
-                  style={{ color: "#e8f5ea" }}
-                >
+                <div className="text-4xl font-bold mb-3 text-gray-100">
                   {step.step}
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: "#1E5C2B" }}>
+                <h3 className="font-bold text-lg mb-3 text-gray-900">
                   {step.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -197,7 +184,7 @@ export default function MembershipPage() {
       {/* FAQ */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={{ color: "#1E5C2B" }}>
+          <h2 className="text-3xl font-bold mb-10 text-center text-gray-900">
             Membership FAQ
           </h2>
           <div className="space-y-6">
@@ -220,7 +207,7 @@ export default function MembershipPage() {
               },
             ].map((faq) => (
               <div key={faq.q} className="border border-gray-100 rounded-xl p-6">
-                <h3 className="font-bold text-base mb-3" style={{ color: "#1E5C2B" }}>
+                <h3 className="font-bold text-base mb-3 text-gray-900">
                   {faq.q}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
@@ -231,26 +218,25 @@ export default function MembershipPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-14 px-4" style={{ backgroundColor: "#1E5C2B" }}>
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">
+      <section className="py-14 px-4 bg-[#1a1a1a]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-white">
             Ready to Join Kings County Farm Bureau?
           </h2>
-          <p className="text-green-200 text-lg mb-8 leading-relaxed">
+          <p className="text-gray-400 text-lg mb-8 leading-relaxed">
             Contact our office to start your membership application. Our team will
             walk you through the process and answer any questions you have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90"
-              style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-black"
             >
               Apply for Membership
             </Link>
             <a
               href="tel:5595843557"
-              className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-white hover:bg-white hover:text-green-900 transition-all"
+              className="px-8 py-4 rounded-lg font-bold text-lg border border-white/30 text-white hover:bg-white/10 transition-all"
             >
               Call 559-584-3557
             </a>

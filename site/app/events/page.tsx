@@ -74,20 +74,14 @@ export default function EventsPage() {
                 }`}
               >
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                  <span
-                    className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-                    style={{ backgroundColor: "#e8f5ea", color: "#1E5C2B" }}
-                  >
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-700">
                     {event.tag}
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                     {event.title}
                   </h2>
                   <p className="text-gray-600 leading-relaxed mb-4">{event.description}</p>
-                  <div
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold"
-                    style={{ backgroundColor: "#e8f5ea", color: "#1E5C2B" }}
-                  >
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold bg-gray-100 text-gray-800">
                     {event.highlight}
                   </div>
                 </div>
@@ -108,27 +102,25 @@ export default function EventsPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-14 px-4 bg-gray-50">
+      <section className="py-14 px-4 bg-[#1a1a1a]">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+          <h2 className="text-2xl font-bold mb-4 text-white">
             Stay Up to Date on KCFB Events
           </h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="text-gray-400 mb-6 leading-relaxed">
             Sign up for the bi-weekly eNewsletter to receive event announcements,
             agricultural news and KCFB updates directly in your inbox.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/newsletter/"
-              className="px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90"
-              style={{ backgroundColor: "#1E5C2B" }}
+              className="px-6 py-3 rounded-lg font-bold text-black transition-all hover:opacity-90 bg-[#F6B330]"
             >
               Subscribe to eNewsletter
             </Link>
             <Link
               href="/contact/"
-              className="px-6 py-3 rounded-lg font-bold border-2 transition-all hover:bg-gray-100"
-              style={{ borderColor: "#1E5C2B", color: "#1E5C2B" }}
+              className="px-6 py-3 rounded-lg font-bold border border-white/30 text-white hover:bg-white/10 transition-all"
             >
               Contact Us
             </Link>

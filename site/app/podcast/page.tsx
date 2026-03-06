@@ -45,13 +45,10 @@ export default function PodcastPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div
-                className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-                style={{ backgroundColor: "#e8f5ea", color: "#1E5C2B" }}
-              >
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
                 HOSTED BY DUSTY FERENCE
               </div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-3xl font-bold mb-4 text-gray-900">
                 The Farm Life Podcast
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -75,15 +72,13 @@ export default function PodcastPage() {
                   href="https://www.youtube.com/@KingsCountyFarmBureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90"
-                  style={{ backgroundColor: "#1E5C2B" }}
+                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90 bg-[#1a1a1a]"
                 >
                   Watch on YouTube
                 </a>
                 <Link
                   href="/newsletter/"
-                  className="px-6 py-3 rounded-lg font-bold text-center border-2 transition-all hover:bg-gray-50"
-                  style={{ borderColor: "#1E5C2B", color: "#1E5C2B" }}
+                  className="px-6 py-3 rounded-lg font-bold text-center border border-gray-300 text-gray-700 transition-all hover:bg-gray-50"
                 >
                   Get Updates
                 </Link>
@@ -106,8 +101,8 @@ export default function PodcastPage() {
       {/* Listen On */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
-            Listen & Subscribe
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+            Listen &amp; Subscribe
           </h2>
           <p className="text-gray-600 mb-10 leading-relaxed">
             The Farm Life Podcast is available on all major podcast platforms.
@@ -121,7 +116,7 @@ export default function PodcastPage() {
               className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all group"
             >
               <div className="text-4xl mb-4">🎙️</div>
-              <div className="font-bold text-lg mb-2" style={{ color: "#1E5C2B" }}>
+              <div className="font-bold text-lg mb-2 text-gray-900">
                 Apple Podcasts
               </div>
               <div className="text-sm text-gray-500">Listen on Apple Podcasts</div>
@@ -133,7 +128,7 @@ export default function PodcastPage() {
               className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all group"
             >
               <div className="text-4xl mb-4">🎵</div>
-              <div className="font-bold text-lg mb-2" style={{ color: "#1E5C2B" }}>
+              <div className="font-bold text-lg mb-2 text-gray-900">
                 Spotify
               </div>
               <div className="text-sm text-gray-500">Listen on Spotify</div>
@@ -145,7 +140,7 @@ export default function PodcastPage() {
               className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all group"
             >
               <div className="text-4xl mb-4">▶️</div>
-              <div className="font-bold text-lg mb-2" style={{ color: "#1E5C2B" }}>
+              <div className="font-bold text-lg mb-2 text-gray-900">
                 YouTube
               </div>
               <div className="text-sm text-gray-500">Watch on YouTube</div>
@@ -155,10 +150,10 @@ export default function PodcastPage() {
       </section>
 
       {/* Host Info */}
-      <section className="py-14 px-4" style={{ backgroundColor: "#1E5C2B" }}>
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-2xl font-bold mb-4">About Your Host</h2>
-          <p className="text-green-200 leading-relaxed mb-6">
+      <section className="py-14 px-4 bg-[#1a1a1a]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-4 text-white">About Your Host</h2>
+          <p className="text-gray-400 leading-relaxed mb-6">
             Dusty Ference is the Executive Director of Kings County Farm Bureau and
             General Manager of the Excelsior/Kings River Resource Conservation District.
             With a citrus farming background and years of experience as a farm manager,
@@ -166,8 +161,7 @@ export default function PodcastPage() {
           </p>
           <Link
             href="/about/"
-            className="inline-block px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90"
-            style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
+            className="inline-block px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-black"
           >
             Learn About KCFB Leadership
           </Link>

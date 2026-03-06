@@ -10,13 +10,10 @@ export default function TermsOfServicePage() {
     <div className="py-16 px-4 bg-white">
       <div className="max-w-3xl mx-auto">
         <div className="mb-10">
-          <div
-            className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-            style={{ backgroundColor: "#e8f5ea", color: "#1E5C2B" }}
-          >
+          <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
             Legal
           </div>
-          <h1 className="text-4xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">
             Terms of Service
           </h1>
           <p className="text-gray-500 text-sm">Last updated: March 2026</p>
@@ -24,7 +21,7 @@ export default function TermsOfServicePage() {
 
         <div className="prose prose-gray max-w-none space-y-8">
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               1. Acceptance of Terms
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -35,7 +32,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               2. Use of Website
             </h2>
             <p className="text-gray-600 leading-relaxed mb-3">
@@ -51,7 +48,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               3. Intellectual Property
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -62,7 +59,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               4. Disclaimer
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -74,7 +71,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               5. External Links
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -86,7 +83,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               6. Limitation of Liability
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -97,7 +94,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               7. Membership Terms
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -109,7 +106,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               8. Changes to Terms
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -121,7 +118,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               9. Governing Law
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -131,7 +128,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-xl font-bold mb-3 text-gray-900">
               10. Contact Us
             </h2>
             <p className="text-gray-600 leading-relaxed">

@@ -54,7 +54,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold mb-6" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-2xl font-bold mb-6 text-gray-900">
                 Kings County Farm Bureau
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
@@ -66,14 +66,11 @@ export default function ContactPage() {
 
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "#e8f5ea" }}
-                  >
-                    <MapPin size={18} style={{ color: "#1E5C2B" }} />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
+                    <MapPin size={18} className="text-gray-700" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1" style={{ color: "#1E5C2B" }}>
+                    <div className="font-semibold text-sm mb-1 text-gray-900">
                       Address
                     </div>
                     <div className="text-gray-600 text-sm">
@@ -84,19 +81,16 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "#e8f5ea" }}
-                  >
-                    <Phone size={18} style={{ color: "#1E5C2B" }} />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
+                    <Phone size={18} className="text-gray-700" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1" style={{ color: "#1E5C2B" }}>
+                    <div className="font-semibold text-sm mb-1 text-gray-900">
                       Phone
                     </div>
                     <a
                       href="tel:5595843557"
-                      className="text-gray-600 text-sm hover:text-green-800 transition-colors"
+                      className="text-gray-600 text-sm hover:text-[#A0422A] transition-colors"
                     >
                       559-584-3557
                     </a>
@@ -104,19 +98,16 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "#e8f5ea" }}
-                  >
-                    <Mail size={18} style={{ color: "#1E5C2B" }} />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
+                    <Mail size={18} className="text-gray-700" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1" style={{ color: "#1E5C2B" }}>
+                    <div className="font-semibold text-sm mb-1 text-gray-900">
                       Email
                     </div>
                     <a
                       href="mailto:kcfb@kcfb.org"
-                      className="text-gray-600 text-sm hover:text-green-800 transition-colors"
+                      className="text-gray-600 text-sm hover:text-[#A0422A] transition-colors"
                     >
                       kcfb@kcfb.org
                     </a>
@@ -124,14 +115,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "#e8f5ea" }}
-                  >
-                    <Clock size={18} style={{ color: "#1E5C2B" }} />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
+                    <Clock size={18} className="text-gray-700" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1" style={{ color: "#1E5C2B" }}>
+                    <div className="font-semibold text-sm mb-1 text-gray-900">
                       Office Hours
                     </div>
                     <div className="text-gray-600 text-sm">
@@ -143,13 +131,10 @@ export default function ContactPage() {
               </div>
 
               {/* Map placeholder */}
-              <div
-                className="mt-8 rounded-xl overflow-hidden h-48 flex items-center justify-center"
-                style={{ backgroundColor: "#e8f5ea" }}
-              >
+              <div className="mt-8 rounded-xl overflow-hidden h-48 flex items-center justify-center bg-gray-100">
                 <div className="text-center">
-                  <MapPin size={32} style={{ color: "#1E5C2B" }} className="mx-auto mb-2" />
-                  <div className="text-sm font-medium" style={{ color: "#1E5C2B" }}>
+                  <MapPin size={32} className="text-gray-400 mx-auto mb-2" />
+                  <div className="text-sm font-medium text-gray-500">
                     870 Greenfield Avenue, Hanford, CA
                   </div>
                 </div>
@@ -162,10 +147,9 @@ export default function ContactPage() {
                 <div className="bg-gray-50 rounded-2xl p-10 text-center border border-gray-100">
                   <CheckCircle
                     size={56}
-                    className="mx-auto mb-4"
-                    style={{ color: "#1E5C2B" }}
+                    className="mx-auto mb-4 text-[#5C6A22]"
                   />
-                  <h3 className="text-2xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-900">
                     Message Sent!
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -175,7 +159,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                  <h3 className="text-xl font-bold mb-6" style={{ color: "#1E5C2B" }}>
+                  <h3 className="text-xl font-bold mb-6 text-gray-900">
                     Send Us a Message
                   </h3>
                   <form onSubmit={handleSubmit} className="space-y-4">
@@ -260,8 +244,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={status === "loading"}
-                      className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60"
-                      style={{ backgroundColor: "#1E5C2B" }}
+                      className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#A0422A]"
                     >
                       {status === "loading" ? "Sending..." : "Send Message"}
                     </button>

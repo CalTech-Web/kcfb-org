@@ -115,24 +115,21 @@ export default function HomePage() {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: "rgba(18, 50, 22, 0.72)" }}
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center py-24">
-          <div
-            className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6"
-            style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
-          >
+          <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 bg-white/20 backdrop-blur-sm text-white">
             Agricultural Advocates Since 1918
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Protecting Kings County
             <br />
-            <span style={{ color: "#D4A843" }}>Agriculture</span>
+            <span className="text-[#F6B330]">Agriculture</span>
           </h1>
-          <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Protect, preserve and enhance agriculture in Kings County
           </p>
-          <p className="text-lg text-green-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
             Kings County Farm Bureau is an independent, non-governmental, grassroots
             organization committed to providing education, promotion and representation
             of agriculture since 1918.
@@ -140,14 +137,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/membership/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 hover:scale-105"
-              style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 hover:scale-105 bg-[#A0422A] text-white"
             >
               Become a Member
             </Link>
             <Link
               href="/sgma/"
-              className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-white text-white hover:bg-white hover:text-green-900 transition-all"
+              className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-white text-white hover:bg-white hover:text-black transition-all"
             >
               Donate to SGMA Defense
             </Link>
@@ -156,18 +152,15 @@ export default function HomePage() {
       </section>
 
       {/* Stats Bar */}
-      <section style={{ backgroundColor: "#1E5C2B" }} className="py-10">
+      <section className="py-10 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div
-                  className="text-3xl md:text-4xl font-bold mb-1"
-                  style={{ color: "#D4A843" }}
-                >
+                <div className="text-3xl md:text-4xl font-bold mb-1 text-white">
                   {stat.value}
                 </div>
-                <div className="text-green-200 text-sm">{stat.label}</div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -175,10 +168,10 @@ export default function HomePage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               How We Serve Kings County Agriculture
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -191,24 +184,18 @@ export default function HomePage() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-green-200 transition-all"
+                className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all"
               >
-                <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-                  style={{ backgroundColor: "#e8f5ea" }}
-                >
-                  <service.icon size={24} style={{ color: "#1E5C2B" }} />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-gray-100">
+                  <service.icon size={24} className="text-gray-800" />
                 </div>
-                <h3 className="font-bold text-lg mb-2" style={{ color: "#1E5C2B" }}>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <div
-                  className="flex items-center text-sm font-semibold"
-                  style={{ color: "#D4A843" }}
-                >
+                <div className="flex items-center text-sm font-semibold text-gray-400 group-hover:text-[#A0422A] transition-colors">
                   Learn More <ArrowRight size={14} className="ml-1" />
                 </div>
               </Link>
@@ -218,31 +205,28 @@ export default function HomePage() {
       </section>
 
       {/* Executive Director Quote */}
-      <section
-        className="py-16 px-4"
-        style={{ backgroundColor: "#1E5C2B" }}
-      >
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <div className="rounded-2xl p-10 border border-green-700" style={{ backgroundColor: "rgba(45, 106, 47, 0.6)" }}>
-            <div className="text-5xl font-serif mb-4" style={{ color: "#D4A843" }}>&ldquo;</div>
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6 text-green-100">
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="rounded-2xl p-10 border border-gray-100">
+            <div className="text-5xl font-serif mb-4 text-gray-200">&ldquo;</div>
+            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6 text-gray-700 italic">
               We fight for policies and legislation at the local, state and federal levels
               that support our county&apos;s number one industry - agriculture - for future
               generations.
             </blockquote>
             <div>
-              <div className="font-bold text-lg">Dusty Ference</div>
-              <div className="text-green-300 text-sm">Executive Director, Kings County Farm Bureau</div>
+              <div className="font-bold text-lg text-gray-900">Dusty Ference</div>
+              <div className="text-gray-400 text-sm">Executive Director, Kings County Farm Bureau</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               How KCFB Works For You
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -252,16 +236,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
               <div key={step.step} className="relative">
-                <div
-                  className="text-5xl font-bold mb-3 leading-none"
-                  style={{ color: "#e8f5ea" }}
-                >
+                <div className="text-5xl font-bold mb-3 leading-none text-gray-100">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -271,47 +252,45 @@ export default function HomePage() {
       </section>
 
       {/* SGMA Callout */}
-      <section style={{ backgroundColor: "#2D6A2F" }} className="py-14 px-4">
-        <div className="max-w-5xl mx-auto text-center text-white">
-          <div
-            className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-            style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
-          >
-            ACTIVE LITIGATION
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            SGMA Defense - Fighting for Water Rights
-          </h2>
-          <p className="text-green-200 text-lg mb-6 max-w-3xl mx-auto leading-relaxed">
-            We are challenging the State Water Resources Control Board&apos;s decision to
-            place the Tulare Lake Subbasin on probation. We won a temporary restraining
-            order and preliminary injunction - and we are continuing to fight. Over
-            $600,000 invested in legal defense in 2024 and 2025.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/sgma/"
-              className="px-6 py-3 rounded-lg font-bold border-2 border-white text-white hover:bg-white hover:text-green-900 transition-all"
-            >
-              Learn About the SGMA Case
-            </Link>
-            <Link
-              href="/sgma/"
-              className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90"
-              style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
-            >
-              Donate to the Defense Fund
-            </Link>
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="border-l-4 border-gray-200 pl-8">
+            <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
+              ACTIVE LITIGATION
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
+              SGMA Defense - Fighting for Water Rights
+            </h2>
+            <p className="text-gray-600 text-lg mb-6 max-w-3xl leading-relaxed">
+              We are challenging the State Water Resources Control Board&apos;s decision to
+              place the Tulare Lake Subbasin on probation. We won a temporary restraining
+              order and preliminary injunction - and we are continuing to fight. Over
+              $600,000 invested in legal defense in 2024 and 2025.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/sgma/"
+                className="px-6 py-3 rounded-lg font-bold border border-gray-300 text-gray-700 transition-all hover:bg-gray-50"
+              >
+                Learn About the SGMA Case
+              </Link>
+              <Link
+                href="/sgma/"
+                className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
+              >
+                Donate to the Defense Fund
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Why KCFB */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
                 Why Kings County Farm Bureau?
               </h2>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
@@ -324,8 +303,7 @@ export default function HomePage() {
                   <li key={item} className="flex items-start gap-3">
                     <ChevronRight
                       size={18}
-                      className="mt-0.5 flex-shrink-0"
-                      style={{ color: "#D4A843" }}
+                      className="mt-0.5 flex-shrink-0 text-gray-300"
                     />
                     <span className="text-gray-700 text-sm">{item}</span>
                   </li>
@@ -341,14 +319,11 @@ export default function HomePage() {
                 className="rounded-2xl shadow-xl w-full object-cover"
                 style={{ maxHeight: "500px" }}
               />
-              <div
-                className="absolute -bottom-4 -left-4 rounded-xl p-5 text-white"
-                style={{ backgroundColor: "#1E5C2B" }}
-              >
-                <div className="text-3xl font-bold" style={{ color: "#D4A843" }}>
+              <div className="absolute -bottom-4 -left-4 rounded-xl p-5 bg-[#1a1a1a] shadow-md">
+                <div className="text-3xl font-bold text-[#F6B330]">
                   1918
                 </div>
-                <div className="text-sm text-green-200">Founded in Kings County</div>
+                <div className="text-sm text-gray-400">Founded in Kings County</div>
               </div>
             </div>
           </div>
@@ -356,11 +331,11 @@ export default function HomePage() {
       </section>
 
       {/* Events Preview */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
             <div>
-              <h2 className="text-3xl font-bold mb-2" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-3xl font-bold mb-2 text-gray-900">
                 Upcoming Events
               </h2>
               <p className="text-gray-600">
@@ -369,8 +344,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/events/"
-              className="mt-4 md:mt-0 flex items-center gap-2 font-semibold hover:gap-3 transition-all"
-              style={{ color: "#D4A843" }}
+              className="mt-4 md:mt-0 flex items-center gap-2 font-semibold hover:gap-3 transition-all text-gray-700 hover:text-black"
             >
               View All Events <ArrowRight size={16} />
             </Link>
@@ -402,7 +376,7 @@ export default function HomePage() {
               <Link
                 key={event.title}
                 href="/events/"
-                className="group rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all"
+                className="group rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all bg-white"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -412,16 +386,13 @@ export default function HomePage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 left-3">
-                    <span
-                      className="px-2 py-1 rounded text-xs font-bold text-white"
-                      style={{ backgroundColor: "#1E5C2B" }}
-                    >
+                    <span className="px-2 py-1 rounded text-xs font-bold text-white bg-[#1a1a1a]">
                       {event.tag}
                     </span>
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold text-base mb-2" style={{ color: "#1E5C2B" }}>
+                  <h3 className="font-bold text-base mb-2 text-gray-900">
                     {event.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -435,7 +406,7 @@ export default function HomePage() {
       </section>
 
       {/* Farm Day Highlight */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -449,13 +420,10 @@ export default function HomePage() {
               />
             </div>
             <div className="order-1 lg:order-2">
-              <div
-                className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-                style={{ backgroundColor: "#e8f5ea", color: "#1E5C2B" }}
-              >
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
                 ANNUAL EVENT
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                 Farm Day - Investing in Agriculture&apos;s Future
               </h2>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
@@ -470,8 +438,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/events/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90"
-                style={{ backgroundColor: "#1E5C2B" }}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#1a1a1a]"
               >
                 Learn About Our Events <ArrowRight size={16} />
               </Link>
@@ -480,16 +447,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section
-        className="py-16 px-4 text-center text-white"
-        style={{ backgroundColor: "#1E5C2B" }}
-      >
+      {/* Final CTA Section */}
+      <section className="py-16 px-4 text-center bg-[#1a1a1a]">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Ready to Join Kings County Farm Bureau?
           </h2>
-          <p className="text-green-200 text-lg mb-8 leading-relaxed">
+          <p className="text-gray-400 text-lg mb-8 leading-relaxed">
             For $500/year, become part of the only organization exclusively dedicated
             to protecting Kings County agriculture. Your membership funds advocacy,
             education and the future of farming in our community.
@@ -497,14 +461,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/membership/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90"
-              style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-black"
             >
               Become a Member - $500/Year
             </Link>
             <Link
               href="/contact/"
-              className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-white hover:bg-white hover:text-green-900 transition-all"
+              className="px-8 py-4 rounded-lg font-bold text-lg border border-white/30 text-white hover:bg-white/10 transition-all"
             >
               Contact Us
             </Link>

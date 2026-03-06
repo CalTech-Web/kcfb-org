@@ -40,7 +40,7 @@ export default function FriendsPage() {
       {/* Intro */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6" style={{ color: "#1E5C2B" }}>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
             Supporting Kings County Agriculture
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
@@ -60,7 +60,7 @@ export default function FriendsPage() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-2xl font-bold mb-3 text-gray-900">
               Our Partners
             </h2>
           </div>
@@ -79,7 +79,7 @@ export default function FriendsPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-lg mb-2" style={{ color: "#1E5C2B" }}>
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">
                     {friend.name}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -93,18 +93,17 @@ export default function FriendsPage() {
       </section>
 
       {/* Become a Friend */}
-      <section className="py-16 px-4" style={{ backgroundColor: "#1E5C2B" }}>
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl font-bold mb-6">Become a Friend of Farm Bureau</h2>
-          <p className="text-green-200 text-lg leading-relaxed mb-8">
+      <section className="py-16 px-4 bg-[#1a1a1a]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">Become a Friend of Farm Bureau</h2>
+          <p className="text-gray-400 text-lg leading-relaxed mb-8">
             Show your support for Kings County agriculture by becoming a Friend of Farm
             Bureau. Your partnership helps fund advocacy, education and community programs
             that benefit all of Kings County.
           </p>
           <Link
             href="/contact/"
-            className="inline-block px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90"
-            style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
+            className="inline-block px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-black"
           >
             Contact Us to Learn More
           </Link>

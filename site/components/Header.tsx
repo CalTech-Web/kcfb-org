@@ -45,14 +45,14 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top bar */}
-      <div style={{ backgroundColor: "#1E5C2B" }} className="py-2 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-white text-sm">
+      <div className="bg-[#1a1a1a] py-2 px-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm text-white">
           <span>Protecting Kings County Agriculture Since 1918</span>
           <a
             href="tel:5595843557"
-            className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-1 hover:opacity-70 transition-opacity text-white"
           >
             <Phone size={14} />
             <span>559-584-3557</span>
@@ -63,22 +63,14 @@ export default function Header() {
       {/* Main nav */}
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/images/logos/KCFB White@2x.png"
+            src="/images/logos/kcfb-color-logo.png"
             alt="Kings County Farm Bureau"
-            width={60}
+            width={160}
             height={60}
-            style={{ filter: "invert(1) sepia(1) saturate(3) hue-rotate(80deg) brightness(0.4)" }}
+            style={{ objectFit: "contain" }}
           />
-          <div>
-            <div className="font-bold text-lg leading-tight" style={{ color: "#1E5C2B" }}>
-              Kings County
-            </div>
-            <div className="font-bold text-lg leading-tight" style={{ color: "#1E5C2B" }}>
-              Farm Bureau
-            </div>
-          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -87,10 +79,9 @@ export default function Header() {
             item.children ? (
               <div key={item.label} className="nav-item relative group">
                 <button
-                  className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-green-800 font-medium rounded transition-colors text-sm"
+                  className="flex items-center gap-1 px-3 py-2 font-medium rounded transition-colors text-sm text-gray-700 hover:text-black"
                   onMouseEnter={() => setOpenDropdown(item.label)}
                   onMouseLeave={() => setOpenDropdown(null)}
-                  style={{ color: "#1E5C2B" }}
                 >
                   {item.label}
                   <ChevronDown size={14} />
@@ -105,7 +96,7 @@ export default function Header() {
                     <Link
                       key={child.href}
                       href={child.href}
-                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-800 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-black transition-colors first:rounded-t-lg last:rounded-b-lg"
                     >
                       {child.label}
                     </Link>
@@ -116,8 +107,7 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium rounded transition-colors hover:bg-green-50"
-                style={{ color: "#1E5C2B" }}
+                className="px-3 py-2 text-sm font-medium rounded transition-colors text-gray-700 hover:text-black hover:bg-gray-50"
               >
                 {item.label}
               </Link>
@@ -125,8 +115,7 @@ export default function Header() {
           )}
           <Link
             href="/membership/"
-            className="ml-3 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90"
-            style={{ backgroundColor: "#D4A843" }}
+            className="ml-3 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90 bg-[#A0422A]"
           >
             Become a Member
           </Link>
@@ -150,8 +139,7 @@ export default function Header() {
               {item.children ? (
                 <>
                   <button
-                    className="w-full text-left px-3 py-2 font-medium flex items-center justify-between"
-                    style={{ color: "#1E5C2B" }}
+                    className="w-full text-left px-3 py-2 font-medium flex items-center justify-between text-gray-700"
                     onClick={() =>
                       setOpenDropdown(
                         openDropdown === item.label ? null : item.label
@@ -172,7 +160,7 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:text-green-800"
+                          className="block px-3 py-2 text-sm text-gray-600 hover:text-black"
                           onClick={() => setMobileOpen(false)}
                         >
                           {child.label}
@@ -184,8 +172,7 @@ export default function Header() {
               ) : (
                 <Link
                   href={item.href}
-                  className="block px-3 py-2 font-medium"
-                  style={{ color: "#1E5C2B" }}
+                  className="block px-3 py-2 font-medium text-gray-700"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -196,8 +183,7 @@ export default function Header() {
           <div className="mt-4 pt-4 border-t border-gray-200">
             <Link
               href="/membership/"
-              className="block text-center py-3 rounded-lg text-white font-semibold"
-              style={{ backgroundColor: "#D4A843" }}
+              className="block text-center py-3 rounded-lg font-semibold bg-[#A0422A] text-white"
               onClick={() => setMobileOpen(false)}
             >
               Become a Member

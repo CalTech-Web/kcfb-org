@@ -65,13 +65,10 @@ export default function SGMAPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div
-                className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-                style={{ backgroundColor: "#fef3cd", color: "#856404" }}
-              >
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-amber-50 text-amber-800">
                 ACTIVE LEGAL CHALLENGE
               </div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-3xl font-bold mb-4 text-gray-900">
                 What Is the SGMA Case?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -91,28 +88,16 @@ export default function SGMAPage() {
                 heavy-handed fee requirements.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div
-                  className="rounded-xl p-4 text-center"
-                  style={{ backgroundColor: "#e8f5ea" }}
-                >
-                  <div
-                    className="text-2xl font-bold"
-                    style={{ color: "#1E5C2B" }}
-                  >
+                <div className="rounded-xl p-4 text-center bg-gray-50">
+                  <div className="text-2xl font-bold text-gray-900">
                     $336,372
                   </div>
                   <div className="text-xs text-gray-600 mt-1">
                     Legal defense in 2024
                   </div>
                 </div>
-                <div
-                  className="rounded-xl p-4 text-center"
-                  style={{ backgroundColor: "#e8f5ea" }}
-                >
-                  <div
-                    className="text-2xl font-bold"
-                    style={{ color: "#1E5C2B" }}
-                  >
+                <div className="rounded-xl p-4 text-center bg-gray-50">
+                  <div className="text-2xl font-bold text-gray-900">
                     $288,517
                   </div>
                   <div className="text-xs text-gray-600 mt-1">
@@ -139,7 +124,7 @@ export default function SGMAPage() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">
               What We Are Fighting Against
             </h2>
           </div>
@@ -168,13 +153,10 @@ export default function SGMAPage() {
                 key={point.title}
                 className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
               >
-                <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-                  style={{ backgroundColor: "#e8f5ea" }}
-                >
-                  <point.icon size={24} style={{ color: "#1E5C2B" }} />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-gray-100">
+                  <point.icon size={24} className="text-gray-700" />
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: "#1E5C2B" }}>
+                <h3 className="font-bold text-lg mb-3 text-gray-900">
                   {point.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -190,15 +172,12 @@ export default function SGMAPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">
               Case Timeline
             </h2>
           </div>
           <div className="relative">
-            <div
-              className="absolute left-6 top-0 bottom-0 w-0.5"
-              style={{ backgroundColor: "#e8f5ea" }}
-            />
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-200" />
             <div className="space-y-8">
               {timeline.map((item) => (
                 <div key={item.title} className="relative flex gap-6">
@@ -206,19 +185,16 @@ export default function SGMAPage() {
                     className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 z-10 border-4 border-white"
                     style={{
                       backgroundColor:
-                        item.status === "active" ? "#D4A843" : "#1E5C2B",
+                        item.status === "active" ? "#F6B330" : "#1a1a1a",
                     }}
                   >
                     <CheckCircle size={16} className="text-white" />
                   </div>
                   <div className="flex-1 pb-2">
-                    <div
-                      className="text-xs font-semibold mb-1"
-                      style={{ color: "#D4A843" }}
-                    >
+                    <div className="text-xs font-semibold mb-1 text-gray-400">
                       {item.date}
                     </div>
-                    <h3 className="font-bold text-lg mb-2" style={{ color: "#1E5C2B" }}>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -236,7 +212,7 @@ export default function SGMAPage() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold mb-3" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-2xl font-bold mb-3 text-gray-900">
               Groundwater Sustainability Agencies
             </h2>
             <p className="text-gray-600">
@@ -263,29 +239,28 @@ export default function SGMAPage() {
       </section>
 
       {/* Donate CTA */}
-      <section className="py-16 px-4" style={{ backgroundColor: "#1E5C2B" }}>
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Support the SGMA Defense</h2>
-          <p className="text-green-200 text-lg leading-relaxed mb-4">
+      <section className="py-16 px-4 bg-[#1a1a1a]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-white">Support the SGMA Defense</h2>
+          <p className="text-gray-400 text-lg leading-relaxed mb-4">
             The legal defense has cost over $600,000 across 2024 and 2025. We rely on
             donations from farmers, ranchers and community members who believe in
             protecting local water rights.
           </p>
-          <p className="text-green-200 mb-8">
+          <p className="text-gray-500 mb-8">
             Every contribution helps fund the legal battle to protect Kings County
             agriculture&apos;s future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
-              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90"
-              style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
+              className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-black"
             >
               Donate to the Defense Fund
             </Link>
             <a
               href="tel:5595843557"
-              className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-white hover:bg-white hover:text-green-900 transition-all"
+              className="px-8 py-4 rounded-lg font-bold text-lg border border-white/30 text-white hover:bg-white/10 transition-all"
             >
               Call 559-584-3557
             </a>
@@ -296,7 +271,7 @@ export default function SGMAPage() {
       {/* FAQ */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={{ color: "#1E5C2B" }}>
+          <h2 className="text-3xl font-bold mb-10 text-center text-gray-900">
             SGMA FAQ
           </h2>
           <div className="space-y-6">
@@ -315,7 +290,7 @@ export default function SGMAPage() {
               },
             ].map((faq) => (
               <div key={faq.q} className="border border-gray-100 rounded-xl p-6">
-                <h3 className="font-bold text-base mb-3" style={{ color: "#1E5C2B" }}>
+                <h3 className="font-bold text-base mb-3 text-gray-900">
                   {faq.q}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>

@@ -42,13 +42,10 @@ export default function FarmLifePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div
-                className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-                style={{ backgroundColor: "#e8f5ea", color: "#1E5C2B" }}
-              >
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-gray-100 text-gray-800">
                 MONTHLY PUBLICATION
               </div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+              <h2 className="text-3xl font-bold mb-4 text-gray-900">
                 Your Agricultural News Source
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -66,16 +63,14 @@ export default function FarmLifePage() {
                 Life, contact our office at{" "}
                 <a
                   href="mailto:kcfb@kcfb.org"
-                  className="font-medium"
-                  style={{ color: "#1E5C2B" }}
+                  className="font-medium text-gray-900 hover:text-[#A0422A] transition-colors"
                 >
                   kcfb@kcfb.org
                 </a>{" "}
                 or call{" "}
                 <a
                   href="tel:5595843557"
-                  className="font-medium"
-                  style={{ color: "#1E5C2B" }}
+                  className="font-medium text-gray-900 hover:text-[#A0422A] transition-colors"
                 >
                   559-584-3557
                 </a>
@@ -84,15 +79,13 @@ export default function FarmLifePage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/membership/"
-                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90"
-                  style={{ backgroundColor: "#1E5C2B" }}
+                  className="px-6 py-3 rounded-lg font-bold text-white text-center transition-all hover:opacity-90 bg-[#1a1a1a]"
                 >
                   Become a Member
                 </Link>
                 <Link
                   href="/newsletter/"
-                  className="px-6 py-3 rounded-lg font-bold text-center border-2 transition-all hover:bg-gray-50"
-                  style={{ borderColor: "#1E5C2B", color: "#1E5C2B" }}
+                  className="px-6 py-3 rounded-lg font-bold text-center border border-gray-300 text-gray-700 transition-all hover:bg-gray-50"
                 >
                   Subscribe to eNewsletter
                 </Link>
@@ -116,7 +109,7 @@ export default function FarmLifePage() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: "#1E5C2B" }}>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">
               Recent Issues
             </h2>
             <p className="text-gray-600">
@@ -138,13 +131,10 @@ export default function FarmLifePage() {
                   />
                 </div>
                 <div className="p-5">
-                  <div
-                    className="text-xs font-semibold mb-1"
-                    style={{ color: "#D4A843" }}
-                  >
+                  <div className="text-xs font-semibold mb-1 text-gray-400">
                     {issue.date}
                   </div>
-                  <h3 className="font-bold" style={{ color: "#1E5C2B" }}>
+                  <h3 className="font-bold text-gray-900">
                     {issue.title}
                   </h3>
                 </div>
@@ -155,10 +145,10 @@ export default function FarmLifePage() {
       </section>
 
       {/* Advertising CTA */}
-      <section className="py-14 px-4" style={{ backgroundColor: "#1E5C2B" }}>
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-2xl font-bold mb-4">Advertise in Farm Life</h2>
-          <p className="text-green-200 mb-6 leading-relaxed">
+      <section className="py-14 px-4 bg-[#1a1a1a]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-4 text-white">Advertise in Farm Life</h2>
+          <p className="text-gray-400 mb-6 leading-relaxed">
             Reach Kings County agricultural professionals, farmers, ranchers and
             agribusiness leaders through Farm Life. Contact us to learn about
             advertising rates and opportunities.
@@ -166,14 +156,13 @@ export default function FarmLifePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kcfb@kcfb.org"
-              className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90"
-              style={{ backgroundColor: "#D4A843", color: "#1a1a1a" }}
+              className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-black"
             >
               Email kcfb@kcfb.org
             </a>
             <a
               href="tel:5595843557"
-              className="px-6 py-3 rounded-lg font-bold border-2 border-white hover:bg-white hover:text-green-900 transition-all"
+              className="px-6 py-3 rounded-lg font-bold border border-white/30 text-white hover:bg-white/10 transition-all"
             >
               Call 559-584-3557
             </a>

@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ backgroundColor: "#1E5C2B" }} className="text-white">
+    <footer className="bg-[#1a1a1a] text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Organization Info */}
@@ -19,14 +19,14 @@ export default function Footer() {
                 height={50}
               />
               <div>
-                <div className="font-bold text-lg leading-tight">Kings County</div>
-                <div className="font-bold text-lg leading-tight">Farm Bureau</div>
+                <div className="font-bold text-lg leading-tight text-white">Kings County</div>
+                <div className="font-bold text-lg leading-tight text-white">Farm Bureau</div>
               </div>
             </div>
-            <p className="text-green-200 text-sm leading-relaxed mb-4">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Protecting, preserving and enhancing agriculture in Kings County since 1918.
             </p>
-            <div className="space-y-2 text-sm text-green-200">
+            <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-start gap-2">
                 <MapPin size={14} className="mt-0.5 flex-shrink-0" />
                 <div>
@@ -52,10 +52,10 @@ export default function Footer() {
 
           {/* Organization Links */}
           <div>
-            <h3 className="font-bold text-base mb-4 border-b border-green-600 pb-2">
+            <h3 className="font-bold text-base mb-4 border-b border-gray-700 pb-2 text-white">
               Organization
             </h3>
-            <ul className="space-y-2 text-sm text-green-200">
+            <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/about/" className="hover:text-white transition-colors">
                   About Us
@@ -86,10 +86,10 @@ export default function Footer() {
 
           {/* Resources Links */}
           <div>
-            <h3 className="font-bold text-base mb-4 border-b border-green-600 pb-2">
+            <h3 className="font-bold text-base mb-4 border-b border-gray-700 pb-2 text-white">
               Resources
             </h3>
-            <ul className="space-y-2 text-sm text-green-200">
+            <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/sgma/" className="hover:text-white transition-colors">
                   SGMA Defense
@@ -120,10 +120,10 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h3 className="font-bold text-base mb-4 border-b border-green-600 pb-2">
+            <h3 className="font-bold text-base mb-4 border-b border-gray-700 pb-2 text-white">
               Connect
             </h3>
-            <ul className="space-y-2 text-sm text-green-200 mb-6">
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
               <li>
                 <Link href="/contact/" className="hover:text-white transition-colors">
                   Contact Us
@@ -141,13 +141,13 @@ export default function Footer() {
               </li>
             </ul>
             <div>
-              <p className="text-sm text-green-200 mb-3">Follow Us</p>
+              <p className="text-sm text-gray-400 mb-3">Follow Us</p>
               <div className="flex gap-3">
                 <a
                   href="https://www.instagram.com/kingsfarmbureau/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-green-800 hover:bg-green-700 transition-colors"
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={16} />
@@ -156,7 +156,7 @@ export default function Footer() {
                   href="https://www.youtube.com/@KingsCountyFarmBureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-green-800 hover:bg-green-700 transition-colors"
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white transition-colors"
                   aria-label="YouTube"
                 >
                   <Youtube size={16} />
@@ -165,7 +165,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/kings-county-farm-bureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-green-800 hover:bg-green-700 transition-colors"
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={16} />
@@ -174,7 +174,7 @@ export default function Footer() {
                   href="https://x.com/kingsfarmbureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-green-800 hover:bg-green-700 transition-colors"
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white transition-colors"
                   aria-label="X / Twitter"
                 >
                   <Twitter size={16} />
@@ -186,8 +186,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ backgroundColor: "#163d1e" }} className="py-4 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-green-300">
+      <div className="bg-[#111111] py-4 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-gray-500">
           <div>
             &copy; 2018-{currentYear} Kings County Farm Bureau - All Rights Reserved.
           </div>
