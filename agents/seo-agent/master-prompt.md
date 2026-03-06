@@ -12,3 +12,5 @@ Areas to consider:
 - Page load performance
 - Semantic HTML
 - Sitemap accuracy
+
+After making changes, commit with a concise message and push to origin.
