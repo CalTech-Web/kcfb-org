@@ -62,7 +62,7 @@ export default function MembershipPage() {
         title="Membership"
         subtitle="Join the only organization exclusively dedicated to protecting Kings County agriculture. $500/year. Member since 1918."
         badge="Join KCFB"
-        bgImage="/images/gallery/new-membership.jpg"
+        bgImage="/images/gallery/membership-hero.jpg"
       />
 
       {/* Membership Card */}
@@ -100,12 +100,14 @@ export default function MembershipPage() {
                 ))}
               </ul>
 
-              <Link
-                href="/contact/"
+              <a
+                href="https://connect.intuit.com/portal/app/CommerceNetwork/view/scs-v1-52cc8a801b0e47e7bcec9898fa6cea232f4ce0c4a5e047688160ab0cdaee3a542e1c932d3e8f40a195cd701d88b4896e?locale=EN_US"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
               >
                 Apply for Membership <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
 
             <div className="space-y-6">
@@ -228,12 +230,14 @@ export default function MembershipPage() {
             walk you through the process and answer any questions you have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact/"
+            <a
+              href="https://connect.intuit.com/portal/app/CommerceNetwork/view/scs-v1-52cc8a801b0e47e7bcec9898fa6cea232f4ce0c4a5e047688160ab0cdaee3a542e1c932d3e8f40a195cd701d88b4896e?locale=EN_US"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
             >
               Apply for Membership
-            </Link>
+            </a>
             <a
               href="tel:5595843557"
               className="px-8 py-4 rounded-lg font-bold text-lg border border-white/30 text-white hover:bg-white/10 transition-all"
