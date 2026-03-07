@@ -16,7 +16,7 @@ const events = [
     description:
       "Our signature annual event held each March at Kings Fairgrounds. We partner with the Kings County Office of Education and Kings Fair to bring 2,400+ third graders for hands-on agricultural education experiences. Farm Day connects the next generation with where their food comes from and the importance of Kings County agriculture.",
     highlight: "2,400+ third graders participate annually",
-    image: "/images/gallery/FarmLife.jpg",
+    image: "/images/gallery/farm-day-harvest.jpg",
   },
   {
     title: "Wine vs. Beer Showdown",
@@ -24,7 +24,7 @@ const events = [
     description:
       "Our popular annual fundraiser held at the Hanford Civic Auditorium. Now in its 17th year, the Wine vs. Beer Showdown is a beloved community event that raises funds for agricultural education and advocacy programs. A night of fun, community and support for Kings County agriculture.",
     highlight: "17+ years of successful community fundraising",
-    image: "/images/gallery/The-Zenith_10-15-2025.jpg",
+    image: "/images/gallery/wine-vs-beer.jpg",
   },
   {
     title: "Harvest Classic Golf Tournament",
