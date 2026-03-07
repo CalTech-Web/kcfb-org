@@ -84,8 +84,9 @@ export default function AboutPage() {
                 src="/images/gallery/dusty-ference.jpg"
                 alt="Dusty Ference - Executive Director"
                 width={500}
-                height={700}
-                className="rounded-2xl shadow-xl w-full"
+                height={600}
+                className="rounded-2xl shadow-xl w-full object-cover"
+                style={{ maxHeight: "420px" }}
               />
             </div>
           </div>
@@ -101,8 +102,9 @@ export default function AboutPage() {
                 src="/images/gallery/tiffany-flores.jpg"
                 alt="Tiffany Flores - Office Manager"
                 width={500}
-                height={700}
-                className="rounded-2xl shadow-xl w-full"
+                height={600}
+                className="rounded-2xl shadow-xl w-full object-cover"
+                style={{ maxHeight: "420px" }}
               />
             </div>
             <div>
@@ -154,7 +156,7 @@ export default function AboutPage() {
               >
                 <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden bg-white border-2 border-[#5C6A22]/20 flex items-center justify-center p-2">
                   <Image
-                    src="/images/logos/kcfb-color-logo.png"
+                    src="/images/logos/kcfb-icon.png"
                     alt="KCFB"
                     width={48}
                     height={48}
@@ -195,7 +197,7 @@ export default function AboutPage() {
               >
                 <div className="w-14 h-14 rounded-full mx-auto mb-3 overflow-hidden bg-gray-50 border-2 border-[#5C6A22]/15 flex items-center justify-center p-1.5">
                   <Image
-                    src="/images/logos/kcfb-color-logo.png"
+                    src="/images/logos/kcfb-icon.png"
                     alt="KCFB"
                     width={36}
                     height={36}

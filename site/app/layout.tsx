@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     "California",
     "farm bureau",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
