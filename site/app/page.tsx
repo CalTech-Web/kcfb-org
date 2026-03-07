@@ -378,7 +378,7 @@ export default function HomePage() {
                 href="/events/"
                 className="group rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all bg-white flex flex-col"
               >
-                <div className="relative aspect-[3/2] overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
                     src={event.image}
                     alt={event.title}
