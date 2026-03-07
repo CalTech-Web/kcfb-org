@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
@@ -43,6 +43,17 @@ const navItems = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -74,34 +85,40 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav ref={navRef} className="hidden lg:flex items-center gap-1">
           {navItems.map((item) =>
             item.children ? (
-              <div key={item.label} className="nav-item relative group">
+              <div key={item.label} className="relative">
                 <button
                   className="flex items-center gap-1 px-3 py-2 font-medium rounded transition-colors text-sm text-gray-700 hover:text-black"
-                  onMouseEnter={() => setOpenDropdown(item.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === item.label ? null : item.label
+                    )
+                  }
                 >
                   {item.label}
-                  <ChevronDown size={14} />
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform ${
+                      openDropdown === item.label ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
-                <div
-                  className="absolute top-full left-0 mt-1 w-56 bg-white shadow-xl rounded-lg border border-gray-100 z-50 dropdown-menu"
-                  onMouseEnter={() => setOpenDropdown(item.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                  style={{ display: openDropdown === item.label ? "block" : undefined }}
-                >
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-black transition-colors first:rounded-t-lg last:rounded-b-lg"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
+                {openDropdown === item.label && (
+                  <div className="absolute top-full left-0 mt-1 w-56 bg-white shadow-xl rounded-lg border border-gray-100 z-50">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-black transition-colors first:rounded-t-lg last:rounded-b-lg"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
               <Link
