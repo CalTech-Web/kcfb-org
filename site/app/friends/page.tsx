@@ -1,30 +1,57 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Friends of Farm Bureau",
   description:
-    "Friends of Farm Bureau - supporting businesses and organizations that stand with Kings County agriculture.",
+    "Friends of Farm Bureau - an annual sponsorship program supporting Kings County Farm Bureau's educational programs, industry workshops, political activism and community involvement.",
 };
 
-const friends = [
+const diamondSponsors = [
   {
-    name: "AgWest Farm Credit",
-    image: "/images/gallery/AgWest.jpg",
-    description: "Agricultural lending and financial services serving Kings County farmers.",
-  },
-  {
-    name: "Golden State Credit",
+    name: "Golden State Farm Credit",
     image: "/images/gallery/Golden-State-Credit.jpg",
-    description: "Financial services supporting the agricultural community.",
   },
   {
-    name: "Grabow Insurance",
+    name: "Grabow Well Drilling Inc.",
     image: "/images/gallery/Grabow.jpg",
-    description: "Agricultural and business insurance for Kings County operations.",
   },
+];
+
+const platinumSponsors = [
+  {
+    name: "AgWest FC",
+    image: "/images/gallery/AgWest.jpg",
+  },
+  {
+    name: "The Zenith",
+    image: "/images/gallery/The-Zenith_10-15-2025.jpg",
+  },
+];
+
+const goldSponsors = [
+  "James G. Parker Insurance Associates",
+  "Dias Law Firm",
+  "J.C. Lansdowne INC.",
+  "M. Green and Company",
+  "OFI",
+  "Stone Land Company",
+  "The Wonderful Company",
+];
+
+const silverSponsors = [
+  "All Valley Printing",
+  "Billingsley Tire",
+  "Danell Custom Harvesting",
+  "Garton Tractor",
+  "Laguna Irrigation District",
+  "Les Schwab Tires",
+  "Schuil Ag Real Estate",
+  "Southern California Edison",
+  "Trinkle Ag Flying",
+  "Tulare Lake Compost",
+  "Valley Strong Credit Union",
 ];
 
 export default function FriendsPage() {
@@ -37,56 +64,133 @@ export default function FriendsPage() {
         bgImage="/images/gallery/new-membership.jpg"
       />
 
-      {/* Intro */}
+      {/* Program Description */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">
             Supporting Kings County Agriculture
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            Friends of Farm Bureau are businesses, organizations and community partners
-            who believe in the mission of Kings County Farm Bureau and support our
-            efforts to protect, preserve and enhance agriculture in Kings County.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            These organizations invest in the future of Kings County agriculture
-            by partnering with KCFB through sponsorships, event support and
-            community involvement.
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Friends of Farm Bureau is an annual sponsorship program that allows businesses to
+            demonstrate their commitment to supporting local farmers through educational programs,
+            industry workshops, political activism and community involvement. As a nonprofit
+            organization, Kings County Farm Bureau depends on the financial support of the
+            agricultural community. All sponsors receive recognition on the KCFB website, in the
+            Farm Life newspaper, in the e-newsletter and at KCFB-hosted events.
           </p>
         </div>
       </section>
 
-      {/* Friends Grid */}
-      <section className="py-16 px-4 bg-gray-50">
+      {/* Diamond Sponsors */}
+      <section className="py-14 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold mb-3 text-gray-900">
-              Our Partners
-            </h2>
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold mb-3 bg-sky-100 text-sky-800 tracking-widest uppercase">
+              Diamond Level
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900">Diamond Sponsors</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {friends.map((friend) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {diamondSponsors.map((sponsor) => (
               <div
-                key={friend.name}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                key={sponsor.name}
+                className="bg-white rounded-2xl shadow-md border-2 border-sky-100 overflow-hidden"
               >
-                <div className="h-48 relative bg-gray-50">
+                <div className="h-56 relative bg-gray-50">
                   <Image
-                    src={friend.image}
-                    alt={friend.name}
+                    src={sponsor.image}
+                    alt={sponsor.name}
                     fill
-                    className="object-cover"
+                    className="object-contain p-6"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-lg mb-2 text-gray-900">
-                    {friend.name}
+                <div className="px-6 py-4 border-t border-gray-100">
+                  <h3 className="font-bold text-lg text-gray-900 text-center">
+                    {sponsor.name}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {friend.description}
-                  </p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Platinum Sponsors */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold mb-3 bg-gray-100 text-gray-700 tracking-widest uppercase">
+              Platinum Level
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900">Platinum Sponsors</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {platinumSponsors.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden"
+              >
+                <div className="h-44 relative bg-white">
+                  <Image
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    fill
+                    className="object-contain p-5"
+                  />
+                </div>
+                <div className="px-5 py-3 border-t border-gray-100">
+                  <h3 className="font-bold text-base text-gray-900 text-center">
+                    {sponsor.name}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gold Sponsors */}
+      <section className="py-14 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold mb-3 bg-amber-100 text-amber-800 tracking-widest uppercase">
+              Gold Level
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900">Gold Sponsors</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {goldSponsors.map((name) => (
+              <div
+                key={name}
+                className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center"
+              >
+                <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-amber-700 font-bold text-xs">G</span>
+                </div>
+                <p className="font-semibold text-gray-900 text-sm leading-snug">{name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Silver Sponsors */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold mb-3 bg-slate-100 text-slate-600 tracking-widest uppercase">
+              Silver Level
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900">Silver Sponsors</h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {silverSponsors.map((name) => (
+              <span
+                key={name}
+                className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 border border-slate-200"
+              >
+                {name}
+              </span>
             ))}
           </div>
         </div>
@@ -96,17 +200,24 @@ export default function FriendsPage() {
       <section className="py-16 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Become a Friend of Farm Bureau</h2>
-          <p className="text-green-200 text-lg leading-relaxed mb-8">
+          <p className="text-green-200 text-lg leading-relaxed mb-4">
             Show your support for Kings County agriculture by becoming a Friend of Farm
             Bureau. Your partnership helps fund advocacy, education and community programs
             that benefit all of Kings County.
           </p>
-          <Link
-            href="/contact/"
+          <p className="text-green-100 mb-8 font-medium">
+            If you&apos;re interested in becoming a Friend of Farm Bureau, please call{" "}
+            <a href="tel:5595843557" className="underline hover:text-white transition-colors">
+              (559) 584-3557
+            </a>
+            .
+          </p>
+          <a
+            href="tel:5595843557"
             className="inline-block px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
           >
-            Contact Us to Learn More
-          </Link>
+            Call (559) 584-3557
+          </a>
         </div>
       </section>
     </>

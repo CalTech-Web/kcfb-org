@@ -43,6 +43,24 @@ export default function EKRCDPage() {
                 Agencies to ensure sustainable and locally-governed water management.
               </p>
 
+              <div className="rounded-xl p-6 border-2 border-[#A0422A]/20 bg-[#A0422A]/5 mb-6">
+                <h3 className="font-bold text-lg mb-2 text-gray-900">
+                  Visit the EKRCD Website
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  For full information about programs, meetings, board members and resources,
+                  visit the official EKRCD website at ekrcd.org.
+                </p>
+                <a
+                  href="https://www.ekrcd.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-white text-sm transition-all hover:opacity-90 bg-[#A0422A]"
+                >
+                  Go to ekrcd.org &rarr;
+                </a>
+              </div>
+
               <div className="rounded-xl p-6 border border-gray-100 bg-gray-50">
                 <h3 className="font-bold text-lg mb-3 text-gray-900">
                   EKRCD Focus Areas

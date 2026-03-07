@@ -13,30 +13,58 @@ export const metadata: Metadata = {
 const timeline = [
   {
     date: "May 2024",
-    title: "SWRCB Imposes Probation",
+    title: "Writ Filed in Kings County Superior Court",
     description:
-      "The State Water Resources Control Board places the Tulare Lake Subbasin on probation, imposing metering requirements, well registration and extraction fees.",
+      "Kings County Farm Bureau files a legal challenge against the State Water Resources Control Board's probationary designation of the Tulare Lake Subbasin, which required growers to meter groundwater pumping, register wells and pay extraction fees.",
     status: "past",
   },
   {
-    date: "2024",
-    title: "Temporary Restraining Order",
+    date: "July 2024",
+    title: "Temporary Restraining Order Issued",
     description:
-      "KCFB and partners win a temporary restraining order blocking SWRCB requirements from taking effect while the case is heard.",
+      "The court grants a temporary restraining order blocking SWRCB requirements from taking effect while the case is heard.",
     status: "past",
   },
   {
-    date: "2024",
-    title: "Preliminary Injunction",
+    date: "September 2024",
+    title: "Preliminary Injunction Granted",
     description:
       "A preliminary injunction is granted, further blocking the SWRCB requirements while litigation continues.",
     status: "past",
   },
   {
-    date: "Ongoing",
-    title: "Case Continues",
+    date: "June 2025",
+    title: "Appeal Filed with Fifth District",
     description:
-      "The legal challenge continues through the California court system. KCFB is committed to fighting this case to the California Supreme Court if necessary.",
+      "KCFB files an appeal with the Fifth District Court of Appeal, escalating the legal challenge.",
+    status: "past",
+  },
+  {
+    date: "October 2025",
+    title: "Oral Arguments and Appellate Opinion",
+    description:
+      "Oral arguments are held before the Fifth District. The Appellate Court issues its opinion on the case.",
+    status: "past",
+  },
+  {
+    date: "December 2025",
+    title: "Petition Filed with California Supreme Court",
+    description:
+      "KCFB files a petition with the California Supreme Court to further challenge the SWRCB's authority.",
+    status: "past",
+  },
+  {
+    date: "January 2026",
+    title: "Trial Court Status Hearing",
+    description:
+      "A status hearing is held in Kings County Superior Court to assess the case following appellate proceedings.",
+    status: "past",
+  },
+  {
+    date: "March 2026",
+    title: "Court Hearing After Remittitur",
+    description:
+      "Status conference held after remittitur. The case continues through the California court system.",
     status: "active",
   },
 ];
@@ -48,6 +76,29 @@ const logos = [
   { src: "/images/logos/KCFB-Tri-County-Log.jpg", alt: "Tri-County" },
   { src: "/images/logos/MidKings-River-Image-Logo.jpg", alt: "Mid-Kings River" },
   { src: "/images/logos/South-Fork-Kings-Image-Logo.jpg", alt: "South Fork Kings" },
+];
+
+const individualSupporters = [
+  "Shane Bickner",
+  "Zach Bickner",
+  "John Ellis",
+  "Dusty Ference",
+  "Garrett Gilcrease",
+  "Julie Martella",
+  "Brian Medeiros",
+  "Michael Miya",
+  "Larry Peltzer",
+  "Kevin Robertson",
+  "Daniel Soares",
+  "Chad Souza",
+  "Helen Sullivan",
+];
+
+const institutionalSupporters = [
+  "City of Lemoore",
+  "City of Hanford",
+  "Tulare County Farm Bureau",
+  "Yuba-Sutter County Farm Bureau",
 ];
 
 export default function SGMAPage() {
@@ -68,9 +119,12 @@ export default function SGMAPage() {
               <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-amber-50 text-amber-800">
                 ACTIVE LEGAL CHALLENGE
               </div>
-              <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                What Is the SGMA Case?
+              <h2 className="text-3xl font-bold mb-2 text-gray-900">
+                Kings County Farm Bureau vs. State Water Resources Control Board
               </h2>
+              <p className="text-lg text-[#A0422A] font-semibold mb-4 italic">
+                Defending our water rights. Protecting our agricultural future.
+              </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Kings County Farm Bureau is challenging the State Water Resources Control
                 Board&apos;s (SWRCB) decision to place the Tulare Lake Subbasin on probation
@@ -87,7 +141,7 @@ export default function SGMAPage() {
                 Sustainability Agencies - not through state-imposed probation with
                 heavy-handed fee requirements.
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="rounded-xl p-4 text-center bg-[#5C6A22]/10">
                   <div className="text-2xl font-bold text-[#5C6A22]">
                     $336,372
@@ -102,6 +156,14 @@ export default function SGMAPage() {
                   </div>
                   <div className="text-xs text-gray-600 mt-1">
                     Legal defense in 2025
+                  </div>
+                </div>
+                <div className="rounded-xl p-4 text-center bg-[#5C6A22]/10">
+                  <div className="text-2xl font-bold text-[#5C6A22]">
+                    $80,585
+                  </div>
+                  <div className="text-xs text-gray-600 mt-1">
+                    Legal defense in 2026
                   </div>
                 </div>
               </div>
@@ -238,18 +300,72 @@ export default function SGMAPage() {
         </div>
       </section>
 
+      {/* Supporters */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold mb-3 text-gray-900">
+              Supporters
+            </h2>
+            <p className="text-gray-600">
+              We are grateful to the individuals and organizations who have stood with Kings County Farm Bureau in this legal defense.
+            </p>
+          </div>
+
+          {/* Individual Supporters */}
+          <div className="mb-10">
+            <h3 className="text-lg font-bold mb-5 text-gray-800">
+              Individual Supporters
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {individualSupporters.map((name) => (
+                <span
+                  key={name}
+                  className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-[#5C6A22]/10 text-[#5C6A22] border border-[#5C6A22]/20"
+                >
+                  {name}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Institutional Supporters */}
+          <div>
+            <h3 className="text-lg font-bold mb-5 text-gray-800">
+              Institutional Supporters
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {institutionalSupporters.map((org) => (
+                <div
+                  key={org}
+                  className="bg-gray-50 rounded-xl p-5 border border-gray-100 text-center"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[#A0422A]/10 flex items-center justify-center mx-auto mb-3">
+                    <Scale size={18} className="text-[#A0422A]" />
+                  </div>
+                  <p className="font-semibold text-gray-900 text-sm">{org}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Donate CTA */}
       <section className="py-16 px-4 bg-[#A0422A]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4 text-white">Support the SGMA Defense</h2>
           <p className="text-white/80 text-lg leading-relaxed mb-4">
-            The legal defense has cost over $600,000 across 2024 and 2025. We rely on
+            The legal defense has cost over $700,000 across 2024, 2025 and 2026. We rely on
             donations from farmers, ranchers and community members who believe in
             protecting local water rights.
           </p>
-          <p className="text-white/60 mb-8">
+          <p className="text-white/60 mb-4">
             Every contribution helps fund the legal battle to protect Kings County
             agriculture&apos;s future.
+          </p>
+          <p className="text-white/70 mb-8 text-sm font-medium">
+            Donate via our secure Square checkout to support the legal defense.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -282,11 +398,11 @@ export default function SGMAPage() {
               },
               {
                 q: "How can I support the SGMA defense?",
-                a: "You can donate directly through our contact page or by calling our office at 559-584-3557. The legal defense has cost over $600,000 across 2024 and 2025, and we rely on donations from farmers and community members who believe in protecting local water rights.",
+                a: "You can donate directly through our contact page or by calling our office at 559-584-3557. Donate via our secure Square checkout to support the legal defense. The legal defense has cost over $700,000 across 2024, 2025 and 2026, and we rely on donations from farmers and community members who believe in protecting local water rights.",
               },
               {
                 q: "What is the current status of the case?",
-                a: "We won a temporary restraining order and preliminary injunction blocking the SWRCB requirements. The legal challenge continues through the California court system. KCFB is committed to fighting this case to the California Supreme Court if necessary.",
+                a: "We won a temporary restraining order and preliminary injunction blocking the SWRCB requirements. KCFB has filed appeals through the Fifth District Court of Appeal and the California Supreme Court. A status conference was held after remittitur in March 2026, and the case continues through the California court system.",
               },
             ].map((faq) => (
               <div key={faq.q} className="border border-gray-100 rounded-xl p-6">

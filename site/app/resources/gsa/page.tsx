@@ -13,26 +13,32 @@ const gsas = [
   {
     name: "El Rico GSA",
     logo: "/images/logos/El-Rico-GSA-Image-Logo.jpg",
-  },
-  {
-    name: "Greater Kaweah GSA",
-    logo: "/images/logos/Greater-Kawaeh-Image-Logo.jpg",
-  },
-  {
-    name: "Mid-Kings River GSA",
-    logo: "/images/logos/MidKings-River-Image-Logo.jpg",
+    url: "https://www.elricogsa.com/",
   },
   {
     name: "South Fork Kings GSA",
     logo: "/images/logos/South-Fork-Kings-Image-Logo.jpg",
+    url: "https://southforkkings.org/",
   },
   {
-    name: "Tri-County",
-    logo: "/images/logos/KCFB-Tri-County-Log.jpg",
+    name: "Greater Kaweah GSA",
+    logo: "/images/logos/Greater-Kawaeh-Image-Logo.jpg",
+    url: "https://greaterkaweahgsa.org/en",
   },
   {
-    name: "SWK",
+    name: "SWK GSA",
     logo: "/images/logos/KCFB-SWK-Image-Logo.jpg",
+    url: "https://swkgsa.org/",
+  },
+  {
+    name: "Mid Kings River GSA",
+    logo: "/images/logos/MidKings-River-Image-Logo.jpg",
+    url: "https://www.midkingsrivergsa.org/",
+  },
+  {
+    name: "Tri-County Water Authority",
+    logo: "/images/logos/KCFB-Tri-County-Log.jpg",
+    url: "https://tcwater.org/",
   },
 ];
 
@@ -54,10 +60,16 @@ export default function GSAPage() {
                 What Are Groundwater Sustainability Agencies?
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Groundwater Sustainability Agencies (GSAs) are local agencies established
-                under the Sustainable Groundwater Management Act (SGMA) to manage
-                groundwater basins in California. Kings County has multiple GSAs covering
-                different subbasins of the San Joaquin Valley groundwater basin.
+                Groundwater Sustainability Agencies (GSAs) have been established to manage
+                groundwater basins and develop sustainable groundwater management plans. These
+                entities protect water supplies, reduce overdraft and preserve groundwater quality.
+                Kings County Farm Bureau is committed to working collaboratively with GSAs for
+                effective regional groundwater management.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Kings County has multiple GSAs covering different subbasins of the San Joaquin
+                Valley groundwater basin, each working within the framework established by the
+                Sustainable Groundwater Management Act (SGMA).
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 KCFB strongly supports locally-governed GSA management of Kings County
@@ -89,15 +101,25 @@ export default function GSAPage() {
                 {gsas.map((gsa) => (
                   <div
                     key={gsa.name}
-                    className="bg-gray-50 rounded-xl p-4 border border-gray-100 flex items-center justify-center h-28"
+                    className="bg-gray-50 rounded-xl p-4 border border-gray-100 flex flex-col items-center justify-between h-40 gap-3"
                   >
-                    <Image
-                      src={gsa.logo}
-                      alt={gsa.name}
-                      width={150}
-                      height={80}
-                      className="object-contain max-h-20"
-                    />
+                    <div className="flex-1 flex items-center justify-center w-full">
+                      <Image
+                        src={gsa.logo}
+                        alt={gsa.name}
+                        width={150}
+                        height={80}
+                        className="object-contain max-h-20"
+                      />
+                    </div>
+                    <a
+                      href={gsa.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-[#A0422A] hover:underline whitespace-nowrap"
+                    >
+                      Visit Website &rarr;
+                    </a>
                   </div>
                 ))}
               </div>
