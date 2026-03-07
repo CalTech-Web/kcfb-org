@@ -376,9 +376,9 @@ export default function HomePage() {
               <Link
                 key={event.title}
                 href="/events/"
-                className="group rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all bg-white"
+                className="group rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all bg-white flex flex-col"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -391,11 +391,11 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-5">
+                <div className="p-5 flex-1 flex flex-col">
                   <h3 className="font-bold text-base mb-2 text-gray-900">
                     {event.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
                     {event.description}
                   </p>
                 </div>
