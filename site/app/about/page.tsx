@@ -49,7 +49,7 @@ export default function AboutPage() {
       {/* Executive Director - Dusty Ference */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
                 EXECUTIVE DIRECTOR
@@ -84,9 +84,8 @@ export default function AboutPage() {
                 src="/images/gallery/dusty-ference.jpg"
                 alt="Dusty Ference - Executive Director"
                 width={500}
-                height={600}
-                className="rounded-2xl shadow-xl w-full object-cover"
-                style={{ maxHeight: "500px" }}
+                height={700}
+                className="rounded-2xl shadow-xl w-full"
               />
             </div>
           </div>
@@ -96,15 +95,14 @@ export default function AboutPage() {
       {/* Office Manager - Tiffany Flores */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <Image
                 src="/images/gallery/tiffany-flores.jpg"
                 alt="Tiffany Flores - Office Manager"
                 width={500}
-                height={600}
-                className="rounded-2xl shadow-xl w-full object-cover"
-                style={{ maxHeight: "500px" }}
+                height={700}
+                className="rounded-2xl shadow-xl w-full"
               />
             </div>
             <div>
