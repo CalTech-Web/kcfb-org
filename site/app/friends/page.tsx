@@ -61,7 +61,7 @@ export default function FriendsPage() {
         title="Friends of Farm Bureau"
         subtitle="Businesses and organizations that stand alongside Kings County Farm Bureau in supporting Kings County agriculture."
         badge="Community Partners"
-        bgImage="/images/gallery/new-membership.jpg"
+        bgImage="/images/gallery/friends-hero.jpg"
       />
 
       {/* Program Description */}
@@ -96,12 +96,13 @@ export default function FriendsPage() {
                 key={sponsor.name}
                 className="bg-white rounded-2xl shadow-md border-2 border-sky-100 overflow-hidden"
               >
-                <div className="h-56 relative bg-gray-50">
+                <div className="h-48 relative bg-gray-50">
                   <Image
                     src={sponsor.image}
                     alt={sponsor.name}
                     fill
-                    className="object-contain p-6"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain p-8"
                   />
                 </div>
                 <div className="px-6 py-4 border-t border-gray-100">
@@ -130,12 +131,13 @@ export default function FriendsPage() {
                 key={sponsor.name}
                 className="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden"
               >
-                <div className="h-44 relative bg-white">
+                <div className="h-48 relative bg-white">
                   <Image
                     src={sponsor.image}
                     alt={sponsor.name}
                     fill
-                    className="object-contain p-5"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain p-8"
                   />
                 </div>
                 <div className="px-5 py-3 border-t border-gray-100">
@@ -164,8 +166,14 @@ export default function FriendsPage() {
                 key={name}
                 className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center"
               >
-                <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-3">
-                  <span className="text-amber-700 font-bold text-xs">G</span>
+                <div className="w-10 h-10 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mx-auto mb-3 p-1.5">
+                  <Image
+                    src="/images/logos/kcfb-icon.png"
+                    alt="KCFB"
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
                 </div>
                 <p className="font-semibold text-gray-900 text-sm leading-snug">{name}</p>
               </div>
