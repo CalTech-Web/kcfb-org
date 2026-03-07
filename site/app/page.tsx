@@ -407,44 +407,37 @@ export default function HomePage() {
       </section>
 
       {/* Farm Day Highlight */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <Image
-                src="/images/gallery/FarmLife.jpg"
-                alt="Farm Day education event"
-                width={600}
-                height={400}
-                className="rounded-2xl shadow-xl w-full object-cover"
-                style={{ maxHeight: "400px" }}
-              />
-            </div>
-            <div className="order-1 lg:order-2">
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
-                ANNUAL EVENT
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Farm Day - Investing in Agriculture&apos;s Future
-              </h2>
-              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                Every year, KCFB partners with the Kings County Office of Education and
-                Kings Fair to bring 2,400+ third graders to Kings Fairgrounds for
-                hands-on agricultural education experiences.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                In an increasingly urban world, Farm Day connects the next generation
-                with where their food comes from and the importance of Kings County
-                agriculture to California and the nation.
-              </p>
-              <Link
-                href="/events/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#5C6A22]"
-              >
-                Learn About Our Events <ArrowRight size={16} />
-              </Link>
-            </div>
+      <section className="relative py-24 px-4 overflow-hidden">
+        <Image
+          src="/images/gallery/farm-day.jpg"
+          alt="Kings County farmland"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative max-w-4xl mx-auto text-center">
+          <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-5 bg-[#F6B330] text-[#1a1a1a]">
+            ANNUAL EVENT
           </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-5 text-white">
+            Farm Day - Investing in Agriculture&apos;s Future
+          </h2>
+          <p className="text-white/90 text-lg mb-4 leading-relaxed max-w-2xl mx-auto">
+            Every year, KCFB partners with the Kings County Office of Education and
+            Kings Fair to bring 2,400+ third graders to Kings Fairgrounds for
+            hands-on agricultural education experiences.
+          </p>
+          <p className="text-white/70 mb-8 leading-relaxed max-w-2xl mx-auto">
+            In an increasingly urban world, Farm Day connects the next generation
+            with where their food comes from and the importance of Kings County
+            agriculture to California and the nation.
+          </p>
+          <Link
+            href="/events/"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
+          >
+            Learn About Our Events <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 
