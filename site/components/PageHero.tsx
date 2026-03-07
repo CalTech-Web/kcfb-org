@@ -3,6 +3,7 @@ interface PageHeroProps {
   subtitle?: string;
   badge?: string;
   bgImage?: string;
+  bgPosition?: string;
 }
 
 export default function PageHero({
@@ -10,6 +11,7 @@ export default function PageHero({
   subtitle,
   badge,
   bgImage = "/images/gallery/casey-horner-6tzGnotyesY-unsplash.jpg",
+  bgPosition = "center",
 }: PageHeroProps) {
   return (
     <section
@@ -17,7 +19,7 @@ export default function PageHero({
       style={{
         backgroundImage: `url('${bgImage}')`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: bgPosition,
       }}
     >
       <div

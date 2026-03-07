@@ -59,7 +59,8 @@ export default function EventsPage() {
         title="Events"
         subtitle="From annual fundraisers to monthly networking lunches, KCFB brings the Kings County agricultural community together throughout the year."
         badge="Community Events"
-        bgImage="/images/gallery/Harvest Classic 2026.jpg"
+        bgImage="/images/gallery/sunflower-field.jpg"
+        bgPosition="center 70%"
       />
 
       {/* Events List */}
