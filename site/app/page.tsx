@@ -352,21 +352,21 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                image: "/images/gallery/Harvest Classic 2026.jpg",
+                image: "/images/gallery/Harvest Classic 2026.webp",
                 title: "Harvest Classic Golf Tournament",
                 description:
                   "Annual fundraiser at Kings Country Club. A premier event for the agricultural community.",
                 tag: "Annual Fundraiser",
               },
               {
-                image: "/images/gallery/AM-Sold-Out-.jpg",
+                image: "/images/gallery/AM-Sold-Out-.webp",
                 title: "Annual Meeting",
                 description:
                   "Our yearly membership gathering celebrating another year of advocacy and community.",
                 tag: "Annual Event",
               },
               {
-                image: "/images/gallery/First Friday_v3.png",
+                image: "/images/gallery/First Friday_v3.webp",
                 title: "First Friday Lunch",
                 description:
                   "Monthly networking luncheons connecting Kings County agricultural professionals.",
@@ -378,11 +378,12 @@ export default function HomePage() {
                 href="/events/"
                 className="group rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all bg-white flex flex-col"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[3/2] overflow-hidden">
                   <Image
                     src={event.image}
                     alt={event.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 left-3">
