@@ -211,7 +211,7 @@ export default function AboutPage() {
       {/* Mission */}
       <section className="relative py-24 px-4 overflow-hidden">
         <Image
-          src="/images/gallery/wheat-field.jpg"
+          src="/images/gallery/mission-bg.jpg"
           alt="Kings County farmland"
           fill
           className="object-cover"
