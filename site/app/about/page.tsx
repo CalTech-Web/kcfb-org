@@ -41,7 +41,7 @@ export default function AboutPage() {
         title="Board of Directors & Staff"
         subtitle="The leaders of Kings County Farm Bureau represent the farming families and agricultural businesses of Kings County."
         badge="About KCFB"
-        bgImage="/images/gallery/Cover-photo.jpg"
+        bgImage="/images/gallery/wheat-field.jpg"
       />
 
       {/* Executive Director */}
