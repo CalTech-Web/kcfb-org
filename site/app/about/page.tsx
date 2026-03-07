@@ -79,14 +79,12 @@ export default function AboutPage() {
                 across government levels.
               </p>
             </div>
-            <div>
+            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
               <Image
                 src="/images/gallery/dusty-ference.jpg"
                 alt="Dusty Ference - Executive Director"
-                width={500}
-                height={600}
-                className="rounded-2xl shadow-xl w-full object-cover"
-                style={{ maxHeight: "420px" }}
+                fill
+                className="object-cover object-top"
               />
             </div>
           </div>
@@ -97,14 +95,12 @@ export default function AboutPage() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
+            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
               <Image
                 src="/images/gallery/tiffany-flores.jpg"
                 alt="Tiffany Flores - Office Manager"
-                width={500}
-                height={600}
-                className="rounded-2xl shadow-xl w-full object-cover"
-                style={{ maxHeight: "420px" }}
+                fill
+                className="object-cover object-top"
               />
             </div>
             <div>
