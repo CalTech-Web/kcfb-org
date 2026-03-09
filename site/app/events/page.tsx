@@ -9,7 +9,17 @@ export const metadata: Metadata = {
     "Kings County Farm Bureau events including Farm Day, Wine vs. Beer Showdown, Harvest Classic Golf Tournament and monthly First Friday lunches.",
 };
 
-const events = [
+type EventItem = {
+  title: string;
+  tag: string;
+  description: string;
+  highlight: string;
+  image: string;
+  logoOnly?: boolean;
+  saveTheDate?: string;
+};
+
+const events: EventItem[] = [
   {
     title: "Farm Day",
     tag: "Annual - March",
@@ -32,11 +42,13 @@ const events = [
     description:
       "Annual fundraiser held at Kings Country Club. The Harvest Classic Golf Tournament brings together agricultural professionals, business leaders and community members for a day on the links supporting Kings County Farm Bureau programs and advocacy.",
     highlight: "Annual event at Kings Country Club",
-    image: "/images/gallery/Harvest Classic 2026.jpg",
+    image: "/images/gallery/harvest-classic-logo.webp",
+    logoOnly: true,
+    saveTheDate: "October 26, 2026",
   },
   {
     title: "First Friday Lunch",
-    tag: "Monthly",
+    tag: "Next: April 3, 2026",
     description:
       "Monthly networking luncheons held on the first Friday of each month. First Friday Lunches connect Kings County agricultural professionals, members and community leaders in an informal setting. A great opportunity to network, stay informed on current issues and support KCFB.",
     highlight: "Monthly networking opportunity",
@@ -48,7 +60,9 @@ const events = [
     description:
       "Our yearly membership gathering celebrating another year of advocacy, education and community. The Annual Meeting brings members together to review the year, elect board members and celebrate the accomplishments of Kings County Farm Bureau.",
     highlight: "Yearly membership gathering",
-    image: "/images/gallery/AM-Sold-Out-.jpg",
+    image: "/images/gallery/annual-meeting-logo.jpg",
+    logoOnly: true,
+    saveTheDate: "TBD",
   },
 ];
 
@@ -87,14 +101,31 @@ export default function EventsPage() {
                   </div>
                 </div>
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    width={600}
-                    height={400}
-                    className="rounded-2xl shadow-lg w-full object-cover"
-                    style={{ maxHeight: "380px" }}
-                  />
+                  {event.logoOnly ? (
+                    <div className="flex flex-col items-center justify-center bg-gray-50 rounded-2xl p-10" style={{ minHeight: "300px" }}>
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        width={280}
+                        height={280}
+                        className="object-contain"
+                      />
+                      {event.saveTheDate && (
+                        <p className="mt-6 text-lg font-bold text-[#5C6A22]">
+                          Save the Date: {event.saveTheDate}
+                        </p>
+                      )}
+                    </div>
+                  ) : (
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      width={600}
+                      height={400}
+                      className="rounded-2xl shadow-lg w-full object-cover"
+                      style={{ maxHeight: "380px" }}
+                    />
+                  )}
                 </div>
               </div>
             ))}
@@ -108,7 +139,7 @@ export default function EventsPage() {
           <h2 className="text-2xl font-bold mb-4 text-white">
             Stay Up to Date on KCFB Events
           </h2>
-          <p className="text-green-200 mb-6 leading-relaxed">
+          <p className="text-white/80 mb-6 leading-relaxed">
             Sign up for the bi-weekly eNewsletter to receive event announcements,
             agricultural news and KCFB updates directly in your inbox.
           </p>

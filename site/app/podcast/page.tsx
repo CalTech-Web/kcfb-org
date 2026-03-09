@@ -9,7 +9,7 @@ import { CheckCircle } from "lucide-react";
 
 function GuestForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "" });
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -22,13 +22,13 @@ function GuestForm() {
           site: "kcfb.org",
           name: form.name,
           email: form.email,
-          message: `Phone: ${form.phone}\n\n${form.message}`,
+          message: `Subject: Podcast Guest\nPhone: ${form.phone}`,
           source: "podcast-guest-inquiry",
         }),
       });
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", email: "", phone: "", message: "" });
+        setForm({ name: "", email: "", phone: "" });
       } else {
         setStatus("error");
       }
@@ -97,17 +97,15 @@ function GuestForm() {
           />
         </div>
         <div>
-          <label htmlFor="guest-message" className="block text-sm font-medium text-gray-700 mb-1">
-            Message <span className="text-red-500">*</span>
+          <label htmlFor="guest-subject" className="block text-sm font-medium text-gray-700 mb-1">
+            Subject
           </label>
-          <textarea
-            id="guest-message"
-            required
-            value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-            rows={5}
-            className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 resize-none"
-            placeholder="Tell us about yourself and why you'd like to be a guest on the podcast"
+          <input
+            type="text"
+            id="guest-subject"
+            value="Podcast Guest"
+            readOnly
+            className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm bg-gray-100 text-gray-600 cursor-not-allowed"
           />
         </div>
         {status === "error" && (
@@ -351,13 +349,21 @@ export default function PodcastPage() {
       {/* Episode List */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">
-              All Episodes
-            </h2>
-            <p className="text-gray-600">
-              {episodes.length} episodes covering Kings County agriculture, water rights and more.
-            </p>
+          <div className="flex justify-center items-center gap-6 mb-12">
+            <Image
+              src="/images/gallery/farm-life-podcast-2.png"
+              alt="FarmLife Online"
+              width={260}
+              height={60}
+              className="object-contain h-10 md:h-14 w-auto"
+            />
+            <Image
+              src="/images/gallery/farm-life-podcast-1.png"
+              alt="FarmLife Podcast"
+              width={260}
+              height={60}
+              className="object-contain h-10 md:h-14 w-auto"
+            />
           </div>
           <div className="space-y-3">
             {episodes.map((ep) => (
