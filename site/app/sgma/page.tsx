@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
-import { Scale, DollarSign, AlertCircle, CheckCircle } from "lucide-react";
+import { Scale, DollarSign, AlertCircle, CheckCircle, FileText, Newspaper } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "SGMA Defense",
@@ -69,6 +68,37 @@ const timeline = [
   },
 ];
 
+const newsArticles = [
+  {
+    title: "KCFB v. STATE: What the Appellate Ruling Means for Groundwater Rights in Kings County",
+    author: "Dusty Ference",
+    date: "November 1, 2025",
+    summary:
+      "An in-depth analysis of the Fifth District Court of Appeal ruling and its implications for groundwater management and farmers' rights in Kings County.",
+  },
+  {
+    title: "Kings County Farm Bureau Responds to Appellate Ruling in Groundwater Oversight Case",
+    author: "KCFB",
+    date: "October 29, 2025",
+    summary:
+      "Official statement from Kings County Farm Bureau following the appellate court's decision on the SGMA probation challenge.",
+  },
+  {
+    title: "Defending Local Control of Groundwater: Update on KCFB's SGMA Lawsuit",
+    author: "Dusty Ference",
+    date: "October 25, 2025",
+    summary:
+      "Executive Director Dusty Ference provides an update on the ongoing legal challenge to protect local groundwater management authority.",
+  },
+  {
+    title: "KCFB v. STATE: Fifth District Court of Appeal",
+    author: "Dusty Ference",
+    date: "September 24, 2025",
+    summary:
+      "Coverage of the case as it moves to the Fifth District Court of Appeal, detailing the legal arguments and potential outcomes.",
+  },
+];
+
 const logos = [
   { src: "/images/logos/El-Rico-GSA-Image-Logo.jpg", alt: "El Rico GSA" },
   { src: "/images/logos/Greater-Kawaeh-Image-Logo.jpg", alt: "Greater Kaweah GSA" },
@@ -104,12 +134,44 @@ const institutionalSupporters = [
 export default function SGMAPage() {
   return (
     <>
-      <PageHero
-        title="SGMA Defense"
-        subtitle="Kings County Farm Bureau is fighting to protect local water rights against the State Water Resources Control Board's unprecedented overreach."
-        badge="Active Litigation"
-        bgImage="/images/gallery/mid-kings-river-gsa-boundary.jpg"
-      />
+      {/* Expanded Hero - overlaps transparent header */}
+      <section
+        className="relative text-white"
+        style={{
+          minHeight: "85vh",
+          marginTop: "-110px",
+          paddingTop: "110px",
+        }}
+      >
+        <Image
+          src="/images/gallery/sgma-hero.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: "bottom center" }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.55)" }}
+        />
+        <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "calc(85vh - 110px)" }}>
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 bg-[#F6B330] text-[#1a1a1a]">
+              Active Litigation
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              SGMA Defense
+            </h1>
+            <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              Kings County Farm Bureau is fighting to protect local water rights
+              against the State Water Resources Control Board&apos;s unprecedented
+              overreach.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Overview */}
       <section className="py-16 px-4 bg-white">
@@ -141,7 +203,7 @@ export default function SGMAPage() {
                 Sustainability Agencies - not through state-imposed probation with
                 heavy-handed fee requirements.
               </p>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="rounded-xl p-4 text-center bg-[#5C6A22]/10">
                   <div className="text-2xl font-bold text-[#5C6A22]">
                     $336,372
@@ -174,6 +236,7 @@ export default function SGMAPage() {
                 alt="SGMA Defense"
                 width={500}
                 height={400}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="rounded-2xl w-full object-contain bg-gray-50 p-8"
                 style={{ maxHeight: "400px" }}
               />
@@ -266,6 +329,77 @@ export default function SGMAPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-3 text-gray-900">
+              SGMA Latest News
+            </h2>
+            <p className="text-gray-600">
+              Updates on the SGMA defense case from Kings County Farm Bureau.
+            </p>
+          </div>
+          <div className="space-y-4">
+            {newsArticles.map((article) => (
+              <div
+                key={article.title}
+                className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#A0422A]/10">
+                    <Newspaper size={18} className="text-[#A0422A]" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-base mb-1 text-gray-900">
+                      {article.title}
+                    </h3>
+                    <div className="flex items-center gap-3 text-xs text-gray-500 mb-2">
+                      <span>{article.date}</span>
+                      <span className="w-1 h-1 rounded-full bg-gray-300" />
+                      <span>By {article.author}</span>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {article.summary}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* White Paper Download */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col md:flex-row items-center gap-6">
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#5C6A22]/10">
+              <FileText size={32} className="text-[#5C6A22]" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">
+                SGMA Defense White Paper
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Read the full legal background, causes of action, court rulings and
+                timeline of KCFB&apos;s challenge to the State Water Resources Control
+                Board&apos;s probation of the Tulare Lake Subbasin.
+              </p>
+            </div>
+            <a
+              href="/pdfs/SGMA-White-Paper.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#5C6A22] flex-shrink-0 inline-flex items-center gap-2"
+            >
+              <FileText size={16} />
+              Download PDF
+            </a>
           </div>
         </div>
       </section>
@@ -368,12 +502,14 @@ export default function SGMAPage() {
             Donate via our secure Square checkout to support the legal defense.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact/"
+            <a
+              href="https://checkout.square.site/merchant/4G1PSV9XWFP6G/checkout/AOWE5GPL3DW3NHAULGNN2AVT"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
             >
               Donate to the Defense Fund
-            </Link>
+            </a>
             <a
               href="tel:5595843557"
               className="px-8 py-4 rounded-lg font-bold text-lg border border-white/30 text-white hover:bg-white/10 transition-all"

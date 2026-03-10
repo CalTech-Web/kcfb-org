@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface PageHeroProps {
   title: string;
   subtitle?: string;
@@ -14,14 +16,16 @@ export default function PageHero({
   bgPosition = "center",
 }: PageHeroProps) {
   return (
-    <section
-      className="relative py-20 text-white"
-      style={{
-        backgroundImage: `url('${bgImage}')`,
-        backgroundSize: "cover",
-        backgroundPosition: bgPosition,
-      }}
-    >
+    <section className="relative py-14 md:py-20 text-white">
+      <Image
+        src={bgImage}
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+        style={{ objectPosition: bgPosition }}
+        priority
+      />
       <div
         className="absolute inset-0"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
@@ -32,9 +36,9 @@ export default function PageHero({
             {badge}
           </div>
         )}
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">{title}</h1>
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{title}</h1>
         {subtitle && (
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         )}

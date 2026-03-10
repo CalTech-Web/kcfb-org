@@ -140,7 +140,7 @@ export default function ScholarshipPage() {
       <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-white">Apply for the KCFB Scholarship</h2>
-          <p className="text-green-200 leading-relaxed mb-6">
+          <p className="text-white/80 leading-relaxed mb-6">
             Contact Kings County Farm Bureau to learn about the current scholarship cycle,
             application requirements and deadlines. Our office is here to help you apply.
           </p>

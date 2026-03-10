@@ -49,7 +49,7 @@ export default function GSAPage() {
         title="GSA Information"
         subtitle="Groundwater Sustainability Agencies managing Kings County's groundwater resources under SGMA."
         badge="Resources"
-        bgImage="/images/gallery/mid-kings-river-gsa-boundary.jpg"
+        bgImage="/images/gallery/gsa-hero.jpg"
       />
 
       <section className="py-16 px-4 bg-white">

@@ -123,15 +123,16 @@ export default function ContactPage() {
                       Office Hours
                     </div>
                     <div className="text-gray-600 text-sm">
-                      Monday - Friday<br />
-                      8:00 AM - 5:00 PM
+                      Monday - Thursday: 9:00 AM - 4:00 PM<br />
+                      Friday: By Appointment<br />
+                      Saturday - Sunday: Closed
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Map placeholder */}
-              <div className="mt-8 rounded-xl overflow-hidden h-48 flex items-center justify-center bg-[#5C6A22]/10">
+              <div className="mt-8 rounded-xl overflow-hidden h-36 md:h-48 flex items-center justify-center bg-[#5C6A22]/10">
                 <div className="text-center">
                   <MapPin size={32} className="text-[#5C6A22] mx-auto mb-2" />
                   <div className="text-sm font-medium text-gray-500">
@@ -165,10 +166,11 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                        <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">
                           Full Name <span className="text-red-500">*</span>
                         </label>
                         <input
+                          id="contact-name"
                           type="text"
                           required
                           value={form.name}
@@ -178,10 +180,11 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                        <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-700 mb-1">
                           Phone Number
                         </label>
                         <input
+                          id="contact-phone"
                           type="tel"
                           value={form.phone}
                           onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -191,10 +194,11 @@ export default function ContactPage() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-1">
                         Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
+                        id="contact-email"
                         type="email"
                         required
                         value={form.email}
@@ -204,10 +208,11 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="contact-subject" className="block text-sm font-medium text-gray-700 mb-1">
                         Subject
                       </label>
                       <select
+                        id="contact-subject"
                         value={form.subject}
                         onChange={(e) => setForm({ ...form, subject: e.target.value })}
                         className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 bg-white"
@@ -222,10 +227,11 @@ export default function ContactPage() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1">
                         Message <span className="text-red-500">*</span>
                       </label>
                       <textarea
+                        id="contact-message"
                         required
                         value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}

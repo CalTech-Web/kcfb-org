@@ -212,7 +212,7 @@ export default function FriendsPage() {
       <section className="py-16 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Become a Friend of Farm Bureau</h2>
-          <p className="text-green-200 text-lg leading-relaxed mb-4">
+          <p className="text-white/80 text-lg leading-relaxed mb-4">
             Show your support for Kings County agriculture by becoming a Friend of Farm
             Bureau. Your partnership helps fund advocacy, education and community programs
             that benefit all of Kings County.

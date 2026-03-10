@@ -125,7 +125,7 @@ export default function ChecklistPage() {
           <h2 className="text-2xl font-bold mb-4 text-white">
             Access the Full Checklist
           </h2>
-          <p className="text-green-200 mb-6 leading-relaxed">
+          <p className="text-white/80 mb-6 leading-relaxed">
             The complete Grower/Processor Checklist is available to KCFB members.
             Join today for $500/year to access this and all other member resources.
           </p>

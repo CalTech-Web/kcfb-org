@@ -23,10 +23,10 @@ export default function Footer() {
                 <div className="font-bold text-lg leading-tight text-white">Farm Bureau</div>
               </div>
             </div>
-            <p className="text-green-200 text-sm leading-relaxed mb-4">
+            <p className="text-white/80 text-sm leading-relaxed mb-4">
               Protecting, preserving and enhancing agriculture in Kings County since 1918.
             </p>
-            <div className="space-y-2 text-sm text-green-200">
+            <div className="space-y-2 text-sm text-white/80">
               <div className="flex items-start gap-2">
                 <MapPin size={14} className="mt-0.5 flex-shrink-0" />
                 <div>
@@ -43,8 +43,8 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <Clock size={14} className="mt-0.5 flex-shrink-0" />
                 <div>
-                  Monday - Friday<br />
-                  8:00 AM - 5:00 PM
+                  Mon - Thu: 9AM - 4PM<br />
+                  Fri: By Appointment
                 </div>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function Footer() {
             <h3 className="font-bold text-base mb-4 border-b border-[#6B7A2C] pb-2 text-white">
               Organization
             </h3>
-            <ul className="space-y-2 text-sm text-green-200">
+            <ul className="space-y-2 text-sm text-white/80">
               <li>
                 <Link href="/about/" className="hover:text-white transition-colors">
                   About Us
@@ -89,7 +89,7 @@ export default function Footer() {
             <h3 className="font-bold text-base mb-4 border-b border-[#6B7A2C] pb-2 text-white">
               Resources
             </h3>
-            <ul className="space-y-2 text-sm text-green-200">
+            <ul className="space-y-2 text-sm text-white/80">
               <li>
                 <Link href="/sgma/" className="hover:text-white transition-colors">
                   SGMA Defense
@@ -123,7 +123,7 @@ export default function Footer() {
             <h3 className="font-bold text-base mb-4 border-b border-[#6B7A2C] pb-2 text-white">
               Connect
             </h3>
-            <ul className="space-y-2 text-sm text-green-200 mb-6">
+            <ul className="space-y-2 text-sm text-white/80 mb-6">
               <li>
                 <Link href="/contact/" className="hover:text-white transition-colors">
                   Contact Us
@@ -141,13 +141,13 @@ export default function Footer() {
               </li>
             </ul>
             <div>
-              <p className="text-sm text-green-200 mb-3">Follow Us</p>
+              <p className="text-sm text-white/80 mb-3">Follow Us</p>
               <div className="flex gap-3">
                 <a
                   href="https://www.instagram.com/kingsfarmbureau/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/15 hover:bg-white/25 text-green-200 hover:text-white transition-colors"
+                  className="p-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white/80 hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={16} />
@@ -156,7 +156,7 @@ export default function Footer() {
                   href="https://www.youtube.com/@KingsCountyFarmBureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/15 hover:bg-white/25 text-green-200 hover:text-white transition-colors"
+                  className="p-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white/80 hover:text-white transition-colors"
                   aria-label="YouTube"
                 >
                   <Youtube size={16} />
@@ -165,7 +165,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/kings-county-farm-bureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/15 hover:bg-white/25 text-green-200 hover:text-white transition-colors"
+                  className="p-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white/80 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={16} />
@@ -174,7 +174,7 @@ export default function Footer() {
                   href="https://x.com/kingsfarmbureau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/15 hover:bg-white/25 text-green-200 hover:text-white transition-colors"
+                  className="p-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white/80 hover:text-white transition-colors"
                   aria-label="X / Twitter"
                 >
                   <Twitter size={16} />
@@ -187,7 +187,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="bg-[#4A5A1B] py-4 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-green-300">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-white/70">
           <div>
             &copy; 2018-{currentYear} Kings County Farm Bureau - All Rights Reserved.
           </div>

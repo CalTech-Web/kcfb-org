@@ -100,14 +100,24 @@ export default function MembershipPage() {
                 ))}
               </ul>
 
-              <a
-                href="https://connect.intuit.com/portal/app/CommerceNetwork/view/scs-v1-52cc8a801b0e47e7bcec9898fa6cea232f4ce0c4a5e047688160ab0cdaee3a542e1c932d3e8f40a195cd701d88b4896e?locale=EN_US"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
-              >
-                Apply for Membership <ArrowRight size={16} />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://connect.intuit.com/portal/app/CommerceNetwork/view/scs-v1-52cc8a801b0e47e7bcec9898fa6cea232f4ce0c4a5e047688160ab0cdaee3a542e1c932d3e8f40a195cd701d88b4896e?locale=EN_US"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white transition-all hover:opacity-90 bg-[#A0422A]"
+                >
+                  Apply for Membership <ArrowRight size={16} />
+                </a>
+                <a
+                  href="/pdfs/2025-Membership-Flyer-Fillable.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold transition-all border border-gray-300 text-gray-700 hover:bg-gray-50"
+                >
+                  Download Application (PDF)
+                </a>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -116,6 +126,7 @@ export default function MembershipPage() {
                 alt="KCFB Members"
                 width={600}
                 height={400}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="rounded-2xl shadow-lg w-full object-cover"
                 style={{ maxHeight: "350px" }}
               />
@@ -146,7 +157,7 @@ export default function MembershipPage() {
                 <h3 className="font-bold text-lg mb-3 text-white">
                   Includes California Farm Bureau Membership
                 </h3>
-                <p className="text-green-200 text-sm leading-relaxed">
+                <p className="text-white/80 text-sm leading-relaxed">
                   Your KCFB membership includes a complimentary California Farm Bureau
                   Federation membership, connecting you to the statewide network of
                   agricultural advocates and extending your member discounts.
@@ -225,7 +236,7 @@ export default function MembershipPage() {
           <h2 className="text-3xl font-bold mb-4 text-white">
             Ready to Join Kings County Farm Bureau?
           </h2>
-          <p className="text-green-200 text-lg mb-8 leading-relaxed">
+          <p className="text-white/80 text-lg mb-8 leading-relaxed">
             Contact our office to start your membership application. Our team will
             walk you through the process and answer any questions you have.
           </p>

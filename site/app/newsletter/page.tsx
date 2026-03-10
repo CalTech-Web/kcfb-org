@@ -72,10 +72,11 @@ export default function NewsletterPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="newsletter-name" className="block text-sm font-medium text-gray-700 mb-1">
                     Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
+                    id="newsletter-name"
                     type="text"
                     required
                     value={form.name}
@@ -85,10 +86,11 @@ export default function NewsletterPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="newsletter-email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
+                    id="newsletter-email"
                     type="email"
                     required
                     value={form.email}

@@ -16,7 +16,7 @@ export default function EKRCDPage() {
         title="Excelsior-Kings River RCD"
         subtitle="The Excelsior/Kings River Resource Conservation District works to protect and conserve natural resources in Kings County."
         badge="Resources"
-        bgImage="/images/gallery/mid-kings-river-gsa-boundary.jpg"
+        bgImage="/images/gallery/ekrcd-hero.jpg"
       />
 
       <section className="py-16 px-4 bg-white">
@@ -101,7 +101,7 @@ export default function EKRCDPage() {
           <h2 className="text-2xl font-bold mb-4 text-white">
             Questions About EKRCD?
           </h2>
-          <p className="text-green-200 mb-6">
+          <p className="text-white/80 mb-6">
             Contact Kings County Farm Bureau for more information about the
             Excelsior/Kings River Resource Conservation District and its programs.
           </p>

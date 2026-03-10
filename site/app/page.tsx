@@ -106,13 +106,16 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center text-white"
-        style={{
-          backgroundImage: "url('/images/gallery/casey-horner-6tzGnotyesY-unsplash.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative min-h-[450px] md:min-h-[600px] flex items-center justify-center text-white"
       >
+        <Image
+          src="/images/gallery/casey-horner-6tzGnotyesY-unsplash.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div
           className="absolute inset-0"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
@@ -121,15 +124,15 @@ export default function HomePage() {
           <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 bg-[#F6B330] text-[#1a1a1a]">
             Agricultural Advocates Since 1918
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Protecting Kings County
             <br />
             <span className="text-[#F6B330]">Agriculture</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Protect, preserve and enhance agriculture in Kings County
           </p>
-          <p className="text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-500 mb-10 max-w-3xl mx-auto leading-relaxed">
             Kings County Farm Bureau is an independent, non-governmental, grassroots
             organization committed to providing education, promotion and representation
             of agriculture since 1918.
@@ -141,12 +144,14 @@ export default function HomePage() {
             >
               Become a Member
             </Link>
-            <Link
-              href="/sgma/"
+            <a
+              href="https://checkout.square.site/merchant/4G1PSV9XWFP6G/checkout/AOWE5GPL3DW3NHAULGNN2AVT"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-white text-white hover:bg-white hover:text-black transition-all"
             >
               Donate to SGMA Defense
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -160,7 +165,7 @@ export default function HomePage() {
                 <div className="text-3xl md:text-4xl font-bold mb-1 text-[#F6B330]">
                   {stat.value}
                 </div>
-                <div className="text-green-200 text-sm">{stat.label}</div>
+                <div className="text-white/80 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -216,7 +221,7 @@ export default function HomePage() {
             </blockquote>
             <div>
               <div className="font-bold text-lg text-[#A0422A]">Dusty Ference</div>
-              <div className="text-gray-400 text-sm">Executive Director, Kings County Farm Bureau</div>
+              <div className="text-gray-500 text-sm">Executive Director, Kings County Farm Bureau</div>
             </div>
           </div>
         </div>
@@ -274,12 +279,14 @@ export default function HomePage() {
               >
                 Learn About the SGMA Case
               </Link>
-              <Link
-                href="/sgma/"
+              <a
+                href="https://checkout.square.site/merchant/4G1PSV9XWFP6G/checkout/AOWE5GPL3DW3NHAULGNN2AVT"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
               >
                 Donate to the Defense Fund
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -316,6 +323,7 @@ export default function HomePage() {
                 alt="Kings County Farm Bureau members"
                 width={600}
                 height={500}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="rounded-2xl shadow-xl w-full object-cover"
                 style={{ maxHeight: "500px" }}
               />
@@ -323,7 +331,7 @@ export default function HomePage() {
                 <div className="text-3xl font-bold text-[#F6B330]">
                   1918
                 </div>
-                <div className="text-sm text-green-200">Founded in Kings County</div>
+                <div className="text-sm text-white/80">Founded in Kings County</div>
               </div>
             </div>
           </div>
@@ -378,7 +386,7 @@ export default function HomePage() {
                 href="/events/"
                 className="group rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all bg-white flex flex-col"
               >
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -412,6 +420,7 @@ export default function HomePage() {
           src="/images/gallery/farm-day.jpg"
           alt="Kings County farmland"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -447,7 +456,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Ready to Join Kings County Farm Bureau?
           </h2>
-          <p className="text-green-200 text-lg mb-8 leading-relaxed">
+          <p className="text-white/80 text-lg mb-8 leading-relaxed">
             For $500/year, become part of the only organization exclusively dedicated
             to protecting Kings County agriculture. Your membership funds advocacy,
             education and the future of farming in our community.

@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +34,17 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://kcfb.org",
     siteName: "Kings County Farm Bureau",
+    images: [
+      {
+        url: "https://kcfb.org/images/gallery/new-membership.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kings County Farm Bureau",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -37,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body className="min-h-screen flex flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>
