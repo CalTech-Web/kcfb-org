@@ -101,7 +101,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`${isTransparent ? "fixed" : "sticky"} top-0 left-0 w-full z-50 transition-all duration-300 ${
         isTransparent && !scrolled && !mobileOpen
           ? "bg-transparent shadow-none"
           : "bg-white shadow-sm"

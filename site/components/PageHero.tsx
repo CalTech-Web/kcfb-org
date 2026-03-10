@@ -20,7 +20,7 @@ export default function PageHero({
   return (
     <section
       className="relative py-14 md:py-20 text-white"
-      style={overlapsNav ? { marginTop: "-110px", paddingTop: "110px" } : undefined}
+      style={overlapsNav ? { paddingTop: "calc(110px + 3.5rem)" } : undefined}
     >
       <Image
         src={bgImage}

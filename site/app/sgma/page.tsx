@@ -139,7 +139,6 @@ export default function SGMAPage() {
         className="relative text-white"
         style={{
           minHeight: "85vh",
-          marginTop: "-110px",
           paddingTop: "110px",
         }}
       >
