@@ -19,8 +19,8 @@ export default function PageHero({
 }: PageHeroProps) {
   return (
     <section
-      className="relative py-14 md:py-20 text-white"
-      style={overlapsNav ? { paddingTop: "calc(110px + 3.5rem)" } : undefined}
+      className={`relative text-white ${overlapsNav ? "flex items-center" : "py-14 md:py-20"}`}
+      style={overlapsNav ? { minHeight: "500px", paddingTop: "110px" } : undefined}
     >
       <Image
         src={bgImage}
