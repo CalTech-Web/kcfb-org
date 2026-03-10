@@ -6,6 +6,7 @@ interface PageHeroProps {
   badge?: string;
   bgImage?: string;
   bgPosition?: string;
+  overlapsNav?: boolean;
 }
 
 export default function PageHero({
@@ -14,9 +15,13 @@ export default function PageHero({
   badge,
   bgImage = "/images/gallery/casey-horner-6tzGnotyesY-unsplash.jpg",
   bgPosition = "center",
+  overlapsNav = false,
 }: PageHeroProps) {
   return (
-    <section className="relative py-14 md:py-20 text-white">
+    <section
+      className="relative py-14 md:py-20 text-white"
+      style={overlapsNav ? { marginTop: "-110px", paddingTop: "110px" } : undefined}
+    >
       <Image
         src={bgImage}
         alt=""
