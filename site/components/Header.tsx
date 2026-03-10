@@ -55,7 +55,7 @@ export default function Header() {
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
-  const isTransparent = pathname === "/sgma" || pathname === "/sgma/" || pathname === "/podcast" || pathname === "/podcast/";
+  const isTransparent = pathname === "/sgma" || pathname === "/sgma/";
 
   // Close mobile menu on route change
   useEffect(() => {

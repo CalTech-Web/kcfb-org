@@ -234,7 +234,6 @@ export default function PodcastPage() {
         subtitle="Conversations about Kings County agriculture, water rights, policy and the people who work the land."
         badge="Launched August 2024"
         bgImage="/images/gallery/podcast-hero.jpg"
-        overlapsNav
       />
 
       {/* About Podcast */}
