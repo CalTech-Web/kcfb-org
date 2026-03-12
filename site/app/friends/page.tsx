@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 const diamondSponsors = [
   {
     name: "Golden State Farm Credit",
-    image: "/images/gallery/Golden-State-Credit.jpg",
+    image: "/images/gallery/Golden-State-Credit.svg",
     url: "https://goldenstatefarmcredit.com/",
   },
   {
     name: "Grabow Well Drilling Inc.",
-    image: "/images/gallery/Grabow.jpg",
+    image: "/images/gallery/Grabow.png",
     url: "https://grabowwelldrillinginc.com/",
   },
 ];
@@ -24,12 +24,12 @@ const diamondSponsors = [
 const platinumSponsors = [
   {
     name: "AgWest FC",
-    image: "/images/gallery/AgWest.jpg",
+    image: "/images/gallery/AgWest.png",
     url: "https://agwestfc.com/",
   },
   {
     name: "The Zenith",
-    image: "/images/gallery/The-Zenith_10-15-2025.jpg",
+    image: "/images/gallery/The-Zenith.webp",
     url: "https://www.thezenith.com/",
   },
 ];
@@ -94,7 +94,7 @@ export default function FriendsPage() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900">Diamond Sponsors</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {diamondSponsors.map((sponsor) => (
               <a
                 key={sponsor.name}
@@ -103,13 +103,13 @@ export default function FriendsPage() {
                 rel="noopener noreferrer"
                 className="bg-white rounded-2xl shadow-md border-2 border-sky-100 overflow-hidden hover:shadow-lg transition-all"
               >
-                <div className="h-56 relative bg-gray-50 flex items-center justify-center p-6">
+                <div className="h-72 relative bg-gray-50 flex items-center justify-center p-6">
                   <Image
                     src={sponsor.image}
                     alt={sponsor.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-contain p-6"
+                    className="object-contain p-3"
                   />
                 </div>
                 <div className="px-6 py-4 border-t border-gray-100">
@@ -141,7 +141,7 @@ export default function FriendsPage() {
                 rel="noopener noreferrer"
                 className="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all"
               >
-                <div className="h-48 relative bg-white flex items-center justify-center p-6">
+                <div className="h-44 relative bg-white flex items-center justify-center p-6">
                   <Image
                     src={sponsor.image}
                     alt={sponsor.name}
