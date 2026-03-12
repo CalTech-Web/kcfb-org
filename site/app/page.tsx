@@ -271,36 +271,51 @@ export default function HomePage() {
       </section>
 
       {/* SGMA Callout */}
-      <section className="py-14 px-4 bg-white">
+      <section className="py-16 px-4" style={{ backgroundColor: "#1a2e1c" }}>
         <div className="max-w-5xl mx-auto">
-          <div className="border-l-4 border-gray-200 pl-8">
-            <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#A0422A]/10 text-[#A0422A]">
-              ACTIVE LITIGATION
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-5 bg-[#A0422A] text-white">
+                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse inline-block" />
+                ACTIVE LITIGATION
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                SGMA Defense - Fighting for Water Rights
+              </h2>
+              <p className="text-white/80 text-lg mb-6 max-w-3xl leading-relaxed">
+                We are challenging the State Water Resources Control Board&apos;s decision to
+                place the Tulare Lake Subbasin on probation. We won a temporary restraining
+                order and preliminary injunction - and we are continuing to fight.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/sgma/"
+                  className="px-6 py-3 rounded-lg font-bold border border-white/30 text-white transition-all hover:bg-white/10"
+                >
+                  Learn About the SGMA Case
+                </Link>
+                <a
+                  href="https://checkout.square.site/merchant/4G1PSV9XWFP6G/checkout/AOWE5GPL3DW3NHAULGNN2AVT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#F6B330] text-[#1a1a1a]"
+                >
+                  Donate to the Defense Fund
+                </a>
+              </div>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-              SGMA Defense - Fighting for Water Rights
-            </h2>
-            <p className="text-gray-600 text-lg mb-6 max-w-3xl leading-relaxed">
-              We are challenging the State Water Resources Control Board&apos;s decision to
-              place the Tulare Lake Subbasin on probation. We won a temporary restraining
-              order and preliminary injunction - and we are continuing to fight. Over
-              $600,000 invested in legal defense in 2024 and 2025.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/sgma/"
-                className="px-6 py-3 rounded-lg font-bold border border-gray-300 text-gray-700 transition-all hover:bg-gray-50"
-              >
-                Learn About the SGMA Case
-              </Link>
-              <a
-                href="https://checkout.square.site/merchant/4G1PSV9XWFP6G/checkout/AOWE5GPL3DW3NHAULGNN2AVT"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 rounded-lg font-bold transition-all hover:opacity-90 bg-[#A0422A] text-white"
-              >
-                Donate to the Defense Fund
-              </a>
+            <div className="flex-shrink-0 grid grid-cols-2 gap-4">
+              {[
+                { value: "$336K+", label: "Invested in 2024" },
+                { value: "$288K+", label: "Invested in 2025" },
+                { value: "TRO", label: "Injunction Won" },
+                { value: "CA", label: "Supreme Court" },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center px-5 py-4 rounded-xl" style={{ backgroundColor: "rgba(255,255,255,0.07)" }}>
+                  <div className="text-2xl font-bold text-[#F6B330] mb-1">{stat.value}</div>
+                  <div className="text-white/60 text-xs">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
