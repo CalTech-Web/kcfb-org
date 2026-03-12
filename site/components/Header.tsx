@@ -149,18 +149,18 @@ export default function Header() {
         <nav ref={navRef} className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
           {navItems.map((item) =>
             item.children ? (
-              <div key={item.label} className="relative">
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
                 <button
                   className={`flex items-center gap-1 px-3 py-2 font-medium rounded transition-colors text-sm ${
                     isTransparent && !scrolled
                       ? "text-white hover:text-white/80"
                       : "text-gray-700 hover:text-black"
                   }`}
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === item.label ? null : item.label
-                    )
-                  }
                   aria-expanded={openDropdown === item.label}
                   aria-haspopup="true"
                 >
