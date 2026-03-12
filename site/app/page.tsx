@@ -191,8 +191,8 @@ export default function HomePage() {
                 href={service.href}
                 className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all"
               >
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-gray-100">
-                  <service.icon size={24} className="text-[#5C6A22]" />
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-[#1E5C2B]">
+                  <service.icon size={22} className="text-[#F6B330]" />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {service.title}
@@ -210,18 +210,30 @@ export default function HomePage() {
       </section>
 
       {/* Executive Director Quote */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="rounded-2xl p-10 border border-gray-100">
-            <div className="text-5xl font-serif mb-4 text-[#F6B330]">&ldquo;</div>
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6 text-gray-700 italic">
-              We fight for policies and legislation at the local, state and federal levels
-              that support our county&apos;s number one industry - agriculture - for future
-              generations.
-            </blockquote>
-            <div>
-              <div className="font-bold text-lg text-[#A0422A]">Dusty Ference</div>
-              <div className="text-gray-500 text-sm">Executive Director, Kings County Farm Bureau</div>
+      <section className="py-20 px-4" style={{ backgroundColor: "#1E5C2B" }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div className="flex-shrink-0">
+              <div className="relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-[#F6B330] shadow-xl">
+                <Image
+                  src="/images/gallery/dusty-ference.jpg"
+                  alt="Dusty Ference - Executive Director"
+                  fill
+                  sizes="(max-width: 768px) 144px, 192px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <div className="text-7xl font-serif leading-none mb-2 text-[#F6B330] opacity-60">&ldquo;</div>
+              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6 text-white italic -mt-4">
+                We fight for policies and legislation at the local, state and federal levels
+                that support our county&apos;s number one industry - agriculture - for future
+                generations.
+              </blockquote>
+              <div className="w-12 h-1 rounded-full mb-4 mx-auto md:mx-0" style={{ backgroundColor: "#F6B330" }} />
+              <div className="font-bold text-lg text-[#F6B330]">Dusty Ference</div>
+              <div className="text-white/70 text-sm mt-1">Executive Director, Kings County Farm Bureau</div>
             </div>
           </div>
         </div>
