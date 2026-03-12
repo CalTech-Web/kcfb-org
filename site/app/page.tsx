@@ -240,16 +240,18 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
-              <div key={step.step} className="relative">
-                <div className="text-5xl font-bold mb-3 leading-none text-amber-100">
+              <div key={step.step} className="relative pt-7">
+                <div className="absolute top-0 left-6 w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg bg-[#5C6A22] text-[#F6B330] shadow-md z-10">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {step.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {step.description}
-                </p>
+                <div className="bg-white rounded-xl pt-12 px-6 pb-6 shadow-sm border border-gray-100 h-full">
+                  <h3 className="text-lg font-bold mb-2 text-gray-900">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
