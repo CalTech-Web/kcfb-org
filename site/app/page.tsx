@@ -14,7 +14,7 @@ import {
 const stats = [
   { value: "100+", label: "Years of Advocacy" },
   { value: "2,400+", label: "Students Reached Annually" },
-  { value: "16", label: "Board Members" },
+  { value: "20", label: "Board Members" },
   { value: "$600K+", label: "SGMA Defense Investment" },
 ];
 
@@ -30,7 +30,7 @@ const services = [
     icon: Calendar,
     title: "Events & Education",
     description:
-      "Farm Day, Wine vs. Beer Showdown, Harvest Classic Golf Tournament, First Friday lunches and more community events throughout the year.",
+      "Farm Day, Harvest Classic Golf Tournament, First Friday lunches and more community events throughout the year.",
     href: "/events/",
   },
   {
@@ -56,10 +56,10 @@ const services = [
   },
   {
     icon: Award,
-    title: "Scholarship Program",
+    title: "Friends of Farm Bureau",
     description:
-      "Supporting the next generation of agricultural leaders through scholarships for high school seniors pursuing agriculture studies.",
-    href: "/scholarship/",
+      "Businesses and organizations that support Kings County agriculture through annual sponsorship of KCFB programs and advocacy.",
+    href: "/friends/",
   },
 ];
 
@@ -80,7 +80,7 @@ const steps = [
     step: "03",
     title: "Get Connected",
     description:
-      "Attend First Friday lunches, Wine vs. Beer Showdown, Harvest Classic and other networking events.",
+      "Attend First Friday lunches, Harvest Classic and other networking events.",
   },
   {
     step: "04",

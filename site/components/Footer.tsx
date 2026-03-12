@@ -96,13 +96,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources/checklist/" className="hover:text-white transition-colors">
-                  Grower/Processor Checklist
-                </Link>
-              </li>
-              <li>
-                <Link href="/scholarship/" className="hover:text-white transition-colors">
-                  Scholarship
+                <Link href="/resources/regulatory-costs/" className="hover:text-white transition-colors">
+                  Regulatory Costs
                 </Link>
               </li>
               <li>

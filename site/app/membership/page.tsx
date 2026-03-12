@@ -46,7 +46,7 @@ const steps = [
   {
     step: "03",
     title: "Get Connected",
-    description: "Attend First Friday lunches, Wine vs. Beer Showdown, Harvest Classic and other networking events.",
+    description: "Attend First Friday luncheons, Harvest Classic and other networking events.",
   },
   {
     step: "04",

@@ -46,90 +46,6 @@ export default function AboutPage() {
         bgImage="/images/gallery/wheat-field.jpg"
       />
 
-      {/* Executive Director - Dusty Ference */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
-                EXECUTIVE DIRECTOR
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">
-                Dusty Ference
-              </h2>
-              <div className="text-sm font-semibold mb-6 text-[#A0422A]">
-                Executive Director, Kings County Farm Bureau | General Manager, Excelsior/Kings River RCD
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Dusty serves as Executive Director of Kings County Farm Bureau and General
-                Manager of the Excelsior/Kings River Resource Conservation District. His
-                background includes citrus farming alongside management experience with
-                both organizations, providing diverse perspectives on California
-                agricultural issues.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Beyond his Farm Bureau role, Dusty chairs the Kings County Ag Advisory
-                Committee, serves as Vice President of the Kings Economic Development
-                Corporation, and participates in the Lemoore College Ag Advisory Committee
-                and local Hanford Rotary Club.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                He brings valuable advocacy experience from lobbying in Sacramento and
-                Washington, D.C., and remains committed to representing member interests
-                across government levels.
-              </p>
-            </div>
-            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
-              <Image
-                src="/images/gallery/dusty-ference.jpg"
-                alt="Dusty Ference - Executive Director"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Office Manager - Tiffany Flores */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
-              <Image
-                src="/images/gallery/tiffany-flores.jpg"
-                alt="Tiffany Flores - Office Manager"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <div>
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#A0422A]/10 text-[#A0422A]">
-                OFFICE MANAGER
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">
-                Tiffany Flores
-              </h2>
-              <div className="text-sm font-semibold mb-6 text-[#A0422A]">
-                Office Manager, Kings County Farm Bureau
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Tiffany, a Lemoore native, brings over 18 years of administrative support
-                and customer relations experience from private and government sectors. She
-                keeps KCFB operations running smoothly and ensures members receive
-                excellent service.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                She actively participates in her community through Lions Club International
-                membership, serves as an associate board member of the Sarah A. Mooney
-                Memorial Museum, and has hosted international exchange students through the
-                World Link Organization.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Officers */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -182,7 +98,7 @@ export default function AboutPage() {
               Board of Directors
             </h2>
             <p className="text-gray-600">
-              Our 16-member board represents the diverse agricultural interests of Kings County.
+              Our board represents the diverse agricultural interests of Kings County.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
@@ -204,6 +120,101 @@ export default function AboutPage() {
                 <p className="text-xs text-gray-500 mt-1">Director</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Staff - Executive Director */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#A0422A]/10 text-[#A0422A]">
+              STAFF
+            </div>
+            <h2 className="text-3xl font-bold mb-3 text-gray-900">
+              Staff
+            </h2>
+            <p className="text-gray-600">
+              The dedicated team behind Kings County Farm Bureau&apos;s daily operations and advocacy.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#5C6A22]/10 text-[#5C6A22]">
+                EXECUTIVE DIRECTOR
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">
+                Dusty Ference
+              </h2>
+              <div className="text-sm font-semibold mb-6 text-[#A0422A]">
+                Executive Director, Kings County Farm Bureau | General Manager, Excelsior/Kings River RCD
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Dusty serves as Executive Director of Kings County Farm Bureau and General
+                Manager of the Excelsior/Kings River Resource Conservation District. His
+                background includes citrus farming alongside management experience with
+                both organizations, providing diverse perspectives on California
+                agricultural issues.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Beyond his Farm Bureau role, Dusty chairs the Kings County Ag Advisory
+                Committee, serves as Vice President of the Kings Economic Development
+                Corporation, and participates in the Lemoore College Ag Advisory Committee
+                and local Hanford Rotary Club.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                He brings valuable advocacy experience from lobbying in Sacramento and
+                Washington, D.C., and remains committed to representing member interests
+                across government levels.
+              </p>
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/images/gallery/dusty-ference.jpg"
+                alt="Dusty Ference - Executive Director"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Staff - Office Manager */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/images/gallery/tiffany-flores.jpg"
+                alt="Tiffany Flores - Office Manager"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+            <div>
+              <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-[#A0422A]/10 text-[#A0422A]">
+                OFFICE MANAGER
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">
+                Tiffany Flores
+              </h2>
+              <div className="text-sm font-semibold mb-6 text-[#A0422A]">
+                Office Manager, Kings County Farm Bureau
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Tiffany, a Lemoore native, brings over 18 years of administrative support
+                and customer relations experience from private and government sectors. She
+                keeps KCFB operations running smoothly and ensures members receive
+                excellent service.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                She actively participates in her community through Lions Club International
+                membership, serves as an associate board member of the Sarah A. Mooney
+                Memorial Museum, and has hosted international exchange students through the
+                World Link Organization.
+              </p>
+            </div>
           </div>
         </div>
       </section>

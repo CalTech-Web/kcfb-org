@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Kings County Farm Bureau events including Farm Day, Wine vs. Beer Showdown, Harvest Classic Golf Tournament and monthly First Friday lunches.",
+    "Kings County Farm Bureau events including Farm Day, Harvest Classic Golf Tournament, First Friday Luncheon and Annual Meeting.",
 };
 
 type EventItem = {
@@ -21,6 +21,16 @@ type EventItem = {
 
 const events: EventItem[] = [
   {
+    title: "Annual Meeting",
+    tag: "Annual",
+    description:
+      "Our yearly membership gathering celebrating another year of advocacy, education and community. The Annual Meeting brings members together to review the year, elect board members and celebrate the accomplishments of Kings County Farm Bureau.",
+    highlight: "Yearly membership gathering",
+    image: "/images/gallery/annual-meeting-logo.jpg",
+    logoOnly: true,
+    saveTheDate: "TBD",
+  },
+  {
     title: "Farm Day",
     tag: "Annual - March",
     description:
@@ -29,12 +39,12 @@ const events: EventItem[] = [
     image: "/images/gallery/farm-day-harvest.jpg",
   },
   {
-    title: "Wine vs. Beer Showdown",
-    tag: "Annual Fundraiser",
+    title: "First Friday Luncheon",
+    tag: "Next: April 3, 2026",
     description:
-      "Our popular annual fundraiser held at the Hanford Civic Auditorium. Now in its 17th year, the Wine vs. Beer Showdown is a beloved community event that raises funds for agricultural education and advocacy programs. A night of fun, community and support for Kings County agriculture.",
-    highlight: "17+ years of successful community fundraising",
-    image: "/images/gallery/wine-vs-beer.jpg",
+      "Monthly networking luncheons held on the first Friday of each month. First Friday Luncheons connect Kings County agricultural professionals, members and community leaders in an informal setting. A great opportunity to network, stay informed on current issues and support KCFB.",
+    highlight: "Monthly networking opportunity",
+    image: "/images/gallery/First Friday_v3.png",
   },
   {
     title: "Harvest Classic Golf Tournament",
@@ -45,24 +55,6 @@ const events: EventItem[] = [
     image: "/images/gallery/harvest-classic-logo.webp",
     logoOnly: true,
     saveTheDate: "October 26, 2026",
-  },
-  {
-    title: "First Friday Lunch",
-    tag: "Next: April 3, 2026",
-    description:
-      "Monthly networking luncheons held on the first Friday of each month. First Friday Lunches connect Kings County agricultural professionals, members and community leaders in an informal setting. A great opportunity to network, stay informed on current issues and support KCFB.",
-    highlight: "Monthly networking opportunity",
-    image: "/images/gallery/First Friday_v3.png",
-  },
-  {
-    title: "Annual Meeting",
-    tag: "Annual",
-    description:
-      "Our yearly membership gathering celebrating another year of advocacy, education and community. The Annual Meeting brings members together to review the year, elect board members and celebrate the accomplishments of Kings County Farm Bureau.",
-    highlight: "Yearly membership gathering",
-    image: "/images/gallery/annual-meeting-logo.jpg",
-    logoOnly: true,
-    saveTheDate: "TBD",
   },
 ];
 

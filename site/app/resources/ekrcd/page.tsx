@@ -99,19 +99,24 @@ export default function EKRCDPage() {
       <section className="py-14 px-4 bg-[#5C6A22]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-white">
-            Questions About EKRCD?
+            Questions about EKRCD?
           </h2>
           <p className="text-white/80 mb-6">
-            Contact Kings County Farm Bureau for more information about the
-            Excelsior/Kings River Resource Conservation District and its programs.
+            Contact{" "}
+            <a
+              href="mailto:info@ekrcd.org"
+              className="underline hover:text-white transition-colors font-semibold"
+            >
+              info@ekrcd.org
+            </a>
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/contact/"
+            <a
+              href="mailto:info@ekrcd.org"
               className="px-6 py-3 rounded-lg font-bold text-[#1a1a1a] transition-all hover:opacity-90 bg-[#F6B330]"
             >
-              Contact Us
-            </Link>
+              Email info@ekrcd.org
+            </a>
             <Link
               href="/sgma/"
               className="px-6 py-3 rounded-lg font-bold border border-white/30 text-white hover:bg-white/10 transition-all"

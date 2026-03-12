@@ -12,12 +12,12 @@ const diamondSponsors = [
   {
     name: "Golden State Farm Credit",
     image: "/images/gallery/Golden-State-Credit.jpg",
-    padding: "p-4",
+    url: "https://goldenstatefarmcredit.com/",
   },
   {
     name: "Grabow Well Drilling Inc.",
     image: "/images/gallery/Grabow.jpg",
-    padding: "p-5",
+    url: "https://grabowwelldrillinginc.com/",
   },
 ];
 
@@ -25,23 +25,23 @@ const platinumSponsors = [
   {
     name: "AgWest FC",
     image: "/images/gallery/AgWest.jpg",
-    padding: "p-4",
+    url: "https://agwestfc.com/",
   },
   {
     name: "The Zenith",
     image: "/images/gallery/The-Zenith_10-15-2025.jpg",
-    padding: "p-10",
+    url: "https://www.thezenith.com/",
   },
 ];
 
 const goldSponsors = [
-  "James G. Parker Insurance Associates",
-  "Dias Law Firm",
-  "J.C. Lansdowne INC.",
-  "M. Green and Company",
-  "OFI",
-  "Stone Land Company",
-  "The Wonderful Company",
+  { name: "James G. Parker Insurance Associates", url: "https://jgparker.com/team/tami-sanchez" },
+  { name: "Dias Law Firm", url: "https://diaslaw.com/" },
+  { name: "J.C. Lansdowne INC.", url: "" },
+  { name: "M. Green and Company", url: "https://mgreencpas.com/" },
+  { name: "OFI", url: "https://www.ofi.com" },
+  { name: "Stone Land Company", url: "https://www.stonelandcompany.net/" },
+  { name: "The Wonderful Company", url: "https://wonderful.com" },
 ];
 
 const silverSponsors = [
@@ -96,17 +96,20 @@ export default function FriendsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {diamondSponsors.map((sponsor) => (
-              <div
+              <a
                 key={sponsor.name}
-                className="bg-white rounded-2xl shadow-md border-2 border-sky-100 overflow-hidden"
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-2xl shadow-md border-2 border-sky-100 overflow-hidden hover:shadow-lg transition-all"
               >
-                <div className="h-48 relative bg-gray-50">
+                <div className="h-56 relative bg-gray-50 flex items-center justify-center p-6">
                   <Image
                     src={sponsor.image}
                     alt={sponsor.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className={`object-contain ${sponsor.padding}`}
+                    className="object-contain p-6"
                   />
                 </div>
                 <div className="px-6 py-4 border-t border-gray-100">
@@ -114,7 +117,7 @@ export default function FriendsPage() {
                     {sponsor.name}
                   </h3>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -131,17 +134,20 @@ export default function FriendsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {platinumSponsors.map((sponsor) => (
-              <div
+              <a
                 key={sponsor.name}
-                className="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden"
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all"
               >
-                <div className="h-48 relative bg-white">
+                <div className="h-48 relative bg-white flex items-center justify-center p-6">
                   <Image
                     src={sponsor.image}
                     alt={sponsor.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className={`object-contain ${sponsor.padding}`}
+                    className="object-contain p-6"
                   />
                 </div>
                 <div className="px-5 py-3 border-t border-gray-100">
@@ -149,7 +155,7 @@ export default function FriendsPage() {
                     {sponsor.name}
                   </h3>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -165,23 +171,41 @@ export default function FriendsPage() {
             <h2 className="text-2xl font-bold text-gray-900">Gold Sponsors</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {goldSponsors.map((name) => (
-              <div
-                key={name}
-                className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center"
-              >
-                <div className="w-10 h-10 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mx-auto mb-3 p-1.5">
-                  <Image
-                    src="/images/logos/kcfb-icon.png"
-                    alt="KCFB"
-                    width={28}
-                    height={28}
-                    className="object-contain"
-                  />
+            {goldSponsors.map((sponsor) => {
+              const content = (
+                <>
+                  <div className="w-10 h-10 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mx-auto mb-3 p-1.5">
+                    <Image
+                      src="/images/logos/kcfb-icon.png"
+                      alt="KCFB"
+                      width={28}
+                      height={28}
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="font-semibold text-gray-900 text-sm leading-snug">{sponsor.name}</p>
+                </>
+              );
+
+              return sponsor.url ? (
+                <a
+                  key={sponsor.name}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center hover:shadow-md transition-all"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div
+                  key={sponsor.name}
+                  className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center"
+                >
+                  {content}
                 </div>
-                <p className="font-semibold text-gray-900 text-sm leading-snug">{name}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

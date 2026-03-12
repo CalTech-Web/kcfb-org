@@ -1,38 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect } from "react";
 import PageHero from "@/components/PageHero";
 import Link from "next/link";
-import { CheckCircle, Mail } from "lucide-react";
 
 export default function NewsletterPage() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [form, setForm] = useState({ name: "", email: "" });
+  useEffect(() => {
+    // Load Constant Contact signup form script
+    const existingScript = document.getElementById("signupScript");
+    if (!existingScript) {
+      const metaScript = document.createElement("script");
+      metaScript.textContent = 'var _ctct_m = "fb1745fa5f27acfa3f20f7c817bd0aa7";';
+      document.head.appendChild(metaScript);
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("loading");
-    try {
-      const res = await fetch("https://forms.caltechweb.com/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          site: "kcfb.org",
-          name: form.name,
-          email: form.email,
-          message: "Newsletter signup request",
-          source: "contact-page",
-        }),
-      });
-      if (res.ok) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
+      const script = document.createElement("script");
+      script.id = "signupScript";
+      script.src =
+        "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
     }
-  }
+  }, []);
 
   return (
     <>
@@ -46,79 +35,18 @@ export default function NewsletterPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#5C6A22]/10">
-                <Mail size={24} className="text-[#5C6A22]" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">
-                  Subscribe to the eNewsletter
-                </h2>
-                <p className="text-gray-500 text-sm">Bi-weekly agricultural news and updates</p>
-              </div>
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">
+                Subscribe to the eNewsletter
+              </h2>
+              <p className="text-gray-500 text-sm mt-1">Bi-weekly agricultural news and updates</p>
             </div>
 
-            {status === "success" ? (
-              <div className="text-center py-8">
-                <CheckCircle size={48} className="mx-auto mb-4 text-[#5C6A22]" />
-                <h3 className="text-xl font-bold mb-2 text-gray-900">
-                  You&apos;re Subscribed!
-                </h3>
-                <p className="text-gray-600">
-                  Thank you for subscribing to the Kings County Farm Bureau eNewsletter.
-                  You&apos;ll receive your first issue soon.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="newsletter-name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Full Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="newsletter-name"
-                    type="text"
-                    required
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="newsletter-email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="newsletter-email"
-                    type="email"
-                    required
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:border-transparent"
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                {status === "error" && (
-                  <p className="text-red-600 text-sm">
-                    Something went wrong. Please try again or contact us at 559-584-3557.
-                  </p>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="w-full py-3 rounded-lg font-bold text-white transition-all hover:opacity-90 disabled:opacity-60 bg-[#5C6A22]"
-                >
-                  {status === "loading" ? "Subscribing..." : "Subscribe to eNewsletter"}
-                </button>
-
-                <p className="text-xs text-gray-400 text-center">
-                  We respect your privacy. Unsubscribe at any time.
-                </p>
-              </form>
-            )}
+            {/* Constant Contact Inline Form */}
+            <div
+              className="ctct-inline-form"
+              data-form-id="462f5d51-5b6b-435d-8f3e-c889af2f3c9c"
+            />
           </div>
 
           {/* What to expect */}

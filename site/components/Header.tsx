@@ -37,12 +37,10 @@ const navItems: NavItem[] = [
     children: [
       { label: "Excelsior-Kings River RCD", href: "/resources/ekrcd/" },
       { label: "GSA Information", href: "/resources/gsa/" },
-      { label: "Grower/Processor Checklist", href: "/resources/checklist/" },
       { label: "Regulatory Costs", href: "/resources/regulatory-costs/" },
-      { label: "Scholarship", href: "/scholarship/" },
       { label: "Kings County Ag Commissioner", href: "https://www.countyofkingsca.gov/departments/general-services/agriculture-department-measurement-standards/about-us", external: true },
       { label: "Water District Map (PDF)", href: "/pdfs/Kings-County-Water-District-Map.pdf", external: true },
-      { label: "Spray Days California", href: "https://content.govdelivery.com/accounts/CADPR/bulletins/3d7ed53", external: true },
+      { label: "Spray Days California", href: "https://spraydays.cdpr.ca.gov/", external: true },
     ],
   },
   { label: "Contact Us", href: "/contact/" },

@@ -359,14 +359,7 @@ export default function PodcastPage() {
       {/* Episode List */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center items-center gap-6 mb-12">
-            <Image
-              src="/images/gallery/farm-life-podcast-2.png"
-              alt="FarmLife Online"
-              width={260}
-              height={60}
-              className="object-contain h-10 md:h-14 w-auto"
-            />
+          <div className="flex justify-center items-center mb-12">
             <Image
               src="/images/gallery/farm-life-podcast-1.png"
               alt="FarmLife Podcast"
