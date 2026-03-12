@@ -178,16 +178,18 @@ export default function MembershipPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
-              <div key={step.step} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="text-4xl font-bold mb-3 text-amber-100">
+              <div key={step.step} className="relative pt-7">
+                <div className="absolute top-0 left-6 w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg bg-[#1E5C2B] text-[#F6B330] shadow-md z-10">
                   {step.step}
                 </div>
-                <h3 className="font-bold text-lg mb-3 text-gray-900">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
+                <div className="bg-white rounded-xl pt-12 px-6 pb-6 shadow-sm border border-gray-100 h-full">
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

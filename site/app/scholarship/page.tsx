@@ -121,8 +121,8 @@ export default function ScholarshipPage() {
                 key={item.title}
                 className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
               >
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-[#5C6A22]/10">
-                  <item.icon size={24} className="text-[#5C6A22]" />
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-[#1E5C2B]">
+                  <item.icon size={22} className="text-[#F6B330]" />
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-gray-900">
                   {item.title}
