@@ -48,6 +48,33 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Kings County Farm Bureau",
+  alternateName: "KCFB",
+  url: "https://kcfb.org",
+  logo: "https://kcfb.org/images/logos/kcfb-color-logo.png",
+  foundingDate: "1918",
+  description:
+    "Kings County Farm Bureau is an independent, non-governmental, grassroots organization committed to providing education, promotion and representation of agriculture since 1918.",
+  telephone: "+1-559-584-3557",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "870 Greenfield Avenue",
+    addressLocality: "Hanford",
+    addressRegion: "CA",
+    postalCode: "93230",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://www.instagram.com/kingsfarmbureau/",
+    "https://www.youtube.com/@KingsCountyFarmBureau",
+    "https://www.linkedin.com/company/kings-county-farm-bureau",
+    "https://x.com/kingsfarmbureau",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,6 +82,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>
