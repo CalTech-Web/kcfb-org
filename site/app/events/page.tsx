@@ -102,18 +102,36 @@ export default function EventsPage() {
                 </div>
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
                   {event.logoOnly ? (
-                    <div className="flex flex-col items-center justify-center bg-gray-50 rounded-2xl p-10" style={{ minHeight: "300px" }}>
-                      <Image
-                        src={event.image}
-                        alt={event.title}
-                        width={280}
-                        height={280}
-                        className="object-contain"
+                    <div
+                      className="flex flex-col items-center justify-center rounded-2xl p-10 relative overflow-hidden"
+                      style={{ minHeight: "300px", background: "#1E5C2B" }}
+                    >
+                      {/* Subtle radial glow for depth */}
+                      <div
+                        className="absolute inset-0 opacity-20 pointer-events-none"
+                        style={{
+                          background:
+                            "radial-gradient(ellipse at 60% 40%, #D4A843 0%, transparent 70%)",
+                        }}
                       />
+                      <div className="bg-white rounded-xl p-6 shadow-lg relative z-10" style={{ maxWidth: "220px" }}>
+                        <Image
+                          src={event.image}
+                          alt={event.title}
+                          width={200}
+                          height={200}
+                          className="object-contain"
+                        />
+                      </div>
                       {event.saveTheDate && (
-                        <p className="mt-6 text-lg font-bold text-[#5C6A22]">
-                          Save the Date: {event.saveTheDate}
-                        </p>
+                        <div className="mt-7 relative z-10 text-center">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-2 text-[#1a1a1a]" style={{ background: "#D4A843" }}>
+                            Save the Date
+                          </span>
+                          <p className="text-xl font-bold text-white">
+                            {event.saveTheDate === "TBD" ? "Date TBD" : event.saveTheDate}
+                          </p>
+                        </div>
                       )}
                     </div>
                   ) : (
