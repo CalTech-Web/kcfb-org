@@ -170,7 +170,7 @@ export default function FriendsPage() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900">Gold Sponsors</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
             {goldSponsors.map((sponsor) => {
               const content = (
                 <>
@@ -193,14 +193,14 @@ export default function FriendsPage() {
                   href={sponsor.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center hover:shadow-md transition-all"
+                  className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center hover:shadow-md transition-all w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"
                 >
                   {content}
                 </a>
               ) : (
                 <div
                   key={sponsor.name}
-                  className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center"
+                  className="bg-white rounded-xl p-5 border border-amber-100 shadow-sm text-center w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"
                 >
                   {content}
                 </div>
