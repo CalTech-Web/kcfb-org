@@ -13,11 +13,13 @@ const diamondSponsors = [
     name: "Golden State Farm Credit",
     image: "/images/gallery/Golden-State-Credit.svg",
     url: "https://goldenstatefarmcredit.com/",
+    padding: "p-8",
   },
   {
     name: "Grabow Well Drilling Inc.",
     image: "/images/gallery/Grabow.png",
     url: "https://grabowwelldrillinginc.com/",
+    padding: "p-16",
   },
 ];
 
@@ -109,7 +111,7 @@ export default function FriendsPage() {
                     alt={sponsor.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-contain p-8"
+                    className={`object-contain ${sponsor.padding}`}
                   />
                 </div>
                 <div className="px-6 py-4 border-t border-gray-100">
