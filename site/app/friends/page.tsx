@@ -28,11 +28,13 @@ const platinumSponsors = [
     name: "AgWest FC",
     image: "/images/gallery/AgWest.png",
     url: "https://agwestfc.com/",
+    padding: "p-14",
   },
   {
     name: "The Zenith",
     image: "/images/gallery/The-Zenith.webp",
     url: "https://www.thezenith.com/",
+    padding: "p-10",
   },
 ];
 
@@ -149,7 +151,7 @@ export default function FriendsPage() {
                     alt={sponsor.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-contain p-10"
+                    className={`object-contain ${sponsor.padding}`}
                   />
                 </div>
                 <div className="px-5 py-3 border-t border-gray-100">
