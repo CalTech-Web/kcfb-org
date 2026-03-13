@@ -109,7 +109,7 @@ export default function FriendsPage() {
                     alt={sponsor.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-contain p-3"
+                    className="object-contain p-8"
                   />
                 </div>
                 <div className="px-6 py-4 border-t border-gray-100">
